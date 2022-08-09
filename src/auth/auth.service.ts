@@ -6,6 +6,7 @@ import {
 } from "@nestjs/common";
 import { UserDTO } from "./dto/user.dto";
 import { UserService } from "./user.service";
+import * as bcrypt from "bcrypt";
 
 @Injectable()
 export class AuthService {
@@ -27,7 +28,12 @@ export class AuthService {
       where: { username: user.username },
     });
 
-    if (!findUser || user.password !== findUser.password) {
+    const validatePassword = await bcrypt.compare(
+      user.password,
+      findUser.password
+    );
+
+    if (!findUser || !validatePassword) {
       throw new UnauthorizedException();
     }
     return findUser;
