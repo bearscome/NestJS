@@ -3,7 +3,7 @@ import { AuthService } from "./auth.service";
 import { UserDTO } from "./dto/user.dto";
 import { Response, Request } from "express";
 
-@Controller("api")
+@Controller("auth")
 export class AuthController {
   constructor(private authService: AuthService) {}
 
@@ -13,5 +13,10 @@ export class AuthController {
     @Body() userDTO: UserDTO
   ): Promise<any> {
     return await this.authService.regiseterNewUser(userDTO);
+  }
+
+  @Post("/login")
+  async login(@Body() userDTO: UserDTO): Promise<any> {
+    return await this.authService.validateUser(userDTO);
   }
 }
