@@ -51,4 +51,10 @@ export class AuthService {
       accessToken: this.jwtService.sign(payload),
     };
   }
+
+  async tokenValidateUser(payload: Payload): Promise<UserDTO | undefined> {
+    return await this.userService.findByFeilds({
+      where: { id: payload.id },
+    });
+  }
 }
