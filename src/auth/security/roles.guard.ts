@@ -20,7 +20,9 @@ export class RolesGuard implements CanActivate {
     return (
       user &&
       user.authorities &&
-      user.authorities.some((role) => roles.includes(role))
+      user.authorities.some((role) => {
+        return roles.includes(role.authorityName)
+      })
     );
   }
 }
