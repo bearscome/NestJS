@@ -7,10 +7,14 @@ import { UserService } from "./user.service";
 import { JwtModule } from "@nestjs/jwt";
 import { PassportModule } from "@nestjs/passport";
 import { JwtStrategy } from "./security/passport.jwt.strategy";
+import { UserAuthorityRepository } from "./repository/user-autority.repository";
 
 @Module({
   imports: [
-    TypeOrmExModule.forCustomRepository([UserRepository]),
+    TypeOrmExModule.forCustomRepository([
+      UserRepository,
+      UserAuthorityRepository,
+    ]),
     JwtModule.register({
       secret: "SECRET_KEY",
       signOptions: { expiresIn: "3600s" },

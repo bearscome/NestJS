@@ -45,7 +45,13 @@ export class AuthService {
       throw new UnauthorizedException();
     }
 
-    const payload: Payload = { id: findUser.id, username: findUser.username };
+    this.convertInAuthorities(findUser);
+
+    const payload: Payload = {
+      id: findUser.id,
+      username: findUser.username,
+      authorities: findUser.authorities,
+    };
 
     return {
       accessToken: this.jwtService.sign(payload),
@@ -53,8 +59,34 @@ export class AuthService {
   }
 
   async tokenValidateUser(payload: Payload): Promise<UserDTO | undefined> {
-    return await this.userService.findByFeilds({
+    const userFind = await this.userService.findByFeilds({
       where: { id: payload.id },
     });
+    this.flatAuthorities(userFind);
+    return userFind;
+  }
+
+  private flatAuthorities(user: any): User {
+    if (user && user.authorities) {
+      const authorities: string[] = [];
+      user.authorities.forEach((authority) => {
+        authorities.push(authority);
+      });
+      user.authorities = authorities;
+    }
+
+    return user;
+  }
+
+  private convertInAuthorities(user: any): User {
+    if (user && user.authorities) {
+      const authorities: any[] = [];
+      user.authorities.forEach((authority) => {
+        authorities.push({ name: authority.authorityName });
+      });
+      user.authorities = authorities;
+    }
+
+    return user;
   }
 }
