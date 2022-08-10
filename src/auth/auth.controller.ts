@@ -6,6 +6,8 @@ import {
   Res,
   Get,
   UseGuards,
+  UsePipes,
+  ValidationPipe,
 } from "@nestjs/common";
 import { AuthService } from "./auth.service";
 import { UserDTO } from "./dto/user.dto";
@@ -20,6 +22,7 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post("/register")
+  @UsePipes(ValidationPipe)
   async registerAccount(
     @Req() req: Request,
     @Body() userDTO: UserDTO
