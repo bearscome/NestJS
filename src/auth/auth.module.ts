@@ -16,8 +16,10 @@ import { UserAuthorityRepository } from "./repository/user-autority.repository";
       UserAuthorityRepository,
     ]),
     JwtModule.register({
-      secret: "SECRET_KEY",
-      signOptions: { expiresIn: "3600s" },
+      secret: "process.env.JWT_ACCESS_TOKEN_SECRET",
+      signOptions: {
+        expiresIn: "60s",
+      },
     }),
     PassportModule.register({ defaultStrategy: "jwt" }), // https://velog.io/@wanzekim/ERROR-ExceptionHandler-metatype-is-not-a-constructor
   ],

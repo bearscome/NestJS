@@ -40,11 +40,6 @@ export class AuthController {
   @Post("/login")
   async login(@Body() userDTO: UserDTO, @Res() res: Response): Promise<any> {
     const jwt = await this.authService.validateUser(userDTO);
-    // res.setHeader("Authorization", "Bearer" + jwt.accessToken);
-    // res.cookie("jwt", jwt.accessToken, {
-    //   httpOnly: true,
-    //   maxAge: 24 * 60 * 60 * 1000, // 1day
-    // });
     return res.json({
       jwt: jwt.accessToken,
       message: "success",
@@ -143,11 +138,13 @@ export class AuthController {
   }
 
   @Get("/getUserInfo")
+  @UseGuards(AuthGuard("jwt"))
   async getUserInfo(@Headers() headers: any): Promise<any> {
-    console.log(headers.authorization);
     const jwtstring = headers.authorization.split("Bearer ")[1];
     const userInfo = this.jwtService.verify(jwtstring);
     const findUser = this.authService.findUser(userInfo);
+
+    console.log(headers.authorization, jwtstring, userInfo, findUser);
 
     return findUser;
   }

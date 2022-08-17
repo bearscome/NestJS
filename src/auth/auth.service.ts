@@ -133,10 +133,8 @@ export class AuthService {
   }
 
   async socialUserDoLoginOrSave(userData): Promise<string> {
-    console.log("findByProviderIdOrdSave", { ...userData });
     const user = await this.findByProviderIdOrdSave({ ...userData });
     const jwt = await this.validateUser(user);
-    console.log("findByProviderIdOrdSave", jwt.accessToken);
 
     return jwt.accessToken;
   }

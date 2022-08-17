@@ -14,8 +14,8 @@ export class KakaoStategy extends PassportStrategy(Strategy, "kakao") {
   validate(accessToken: string, refreshToken: string, profile: Profile) {
     const { id, provider } = profile;
     return {
-      accessToken,
-      refreshToken,
+      // accessToken,
+      // refreshToken,
       provider,
       providerId: "" + id,
     };

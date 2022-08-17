@@ -11,5 +11,5 @@ export class UserDTO {
   password: string;
 
   @Column()
-  social_type: string;
+  social_type?: string;
 }
