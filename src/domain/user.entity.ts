@@ -1,9 +1,4 @@
-import {
-  Column,
-  Entity,
-  OneToMany,
-  PrimaryGeneratedColumn,
-} from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { UserAuthority } from "./user-authority.entity";
 
 @Entity("user")
@@ -21,4 +16,7 @@ export class User {
     eager: true,
   })
   authorities?: any[];
+
+  @Column()
+  social_type: string;
 }

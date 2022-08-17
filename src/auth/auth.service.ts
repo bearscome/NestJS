@@ -2,6 +2,7 @@ import {
   HttpException,
   HttpStatus,
   Injectable,
+  Redirect,
   UnauthorizedException,
 } from "@nestjs/common";
 import { UserDTO } from "./dto/user.dto";
@@ -41,7 +42,9 @@ export class AuthService {
       findUser.password
     );
 
-    if (!findUser || !validatePassword) {
+    if (!findUser || (!findUser.social_type && !validatePassword)) {
+      // 1. 저장된 유저가 없음
+      // 2. 소셜타입이 없고(기존 가입 고객이면서) &&  비밀번호가 틀리면
       throw new UnauthorizedException();
     }
 
@@ -88,5 +91,53 @@ export class AuthService {
     }
 
     return user;
+  }
+
+  async findByProviderIdOrdSave(socialUser: {
+    provider: string;
+    providerId: string;
+  }) {
+    const { provider, providerId } = socialUser;
+
+    const user = await this.userService.findByFeilds({
+      where: { username: providerId },
+    });
+
+    console.warn("there is USER?", user);
+
+    if (user) {
+      return user;
+    }
+
+    const UserDTO: UserDTO = {
+      username: providerId,
+      password: providerId,
+      social_type: provider,
+    };
+
+    return this.regiseterNewUser(UserDTO);
+  }
+
+  async findUser(userInfo: {
+    id: number;
+    username: string;
+    authorities: [];
+    iat: number;
+    exp: number;
+  }): Promise<any> {
+    const findUser: UserDTO = await this.userService.findByFeilds({
+      where: { username: userInfo.username },
+    });
+
+    return findUser;
+  }
+
+  async socialUserDoLoginOrSave(userData): Promise<string> {
+    console.log("findByProviderIdOrdSave", { ...userData });
+    const user = await this.findByProviderIdOrdSave({ ...userData });
+    const jwt = await this.validateUser(user);
+    console.log("findByProviderIdOrdSave", jwt.accessToken);
+
+    return jwt.accessToken;
   }
 }

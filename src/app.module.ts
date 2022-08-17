@@ -6,6 +6,8 @@ import { AuthModule } from "./auth/auth.module";
 import { ormConfig } from "./orm.config";
 import { ConfigModule } from "@nestjs/config";
 import { GoogleStrategy } from "./auth/strategy/googleStrategy";
+import { NaverStrategy } from "./auth/strategy/naverStrategy";
+import { KakaoStategy } from "./auth/strategy/kakaoStrategy";
 
 @Module({
   imports: [
@@ -14,6 +16,6 @@ import { GoogleStrategy } from "./auth/strategy/googleStrategy";
     AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppService, GoogleStrategy],
+  providers: [AppService, GoogleStrategy, NaverStrategy, KakaoStategy],
 })
 export class AppModule {}
