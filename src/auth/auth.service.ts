@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   HttpException,
   HttpStatus,
   Injectable,
@@ -37,15 +38,20 @@ export class AuthService {
       where: { username: user.username },
     });
 
+    if (!findUser) {
+      throw new HttpException("회원 정보가 없습니다.", HttpStatus.BAD_REQUEST);
+    }
+
     const validatePassword = await bcrypt.compare(
       user.password,
       findUser.password
     );
 
-    if (!findUser || (!findUser.social_type && !validatePassword)) {
-      // 1. 저장된 유저가 없음
-      // 2. 소셜타입이 없고(기존 가입 고객이면서) &&  비밀번호가 틀리면
-      throw new UnauthorizedException();
+    if (!findUser.social_type && !validatePassword) {
+      throw new HttpException(
+        "비밀번호가 일치하지 않습니다.",
+        HttpStatus.BAD_REQUEST
+      );
     }
 
     this.convertInAuthorities(findUser);

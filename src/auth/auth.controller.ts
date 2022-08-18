@@ -11,6 +11,7 @@ import {
   Headers,
   Param,
   Redirect,
+  HttpStatus,
 } from "@nestjs/common";
 import { AuthService } from "./auth.service";
 import { UserDTO } from "./dto/user.dto";
@@ -43,6 +44,7 @@ export class AuthController {
     return res.json({
       jwt: jwt.accessToken,
       message: "success",
+      statusCode: HttpStatus.OK,
     });
   }
 
@@ -96,6 +98,7 @@ export class AuthController {
     return res.json({
       jwtAcessToken,
       message: "success",
+      statusCode: HttpStatus.OK,
     });
   }
 
@@ -115,6 +118,7 @@ export class AuthController {
     return res.json({
       jwtAcessToken,
       message: "success",
+      statusCode: HttpStatus.OK,
     });
   }
 
@@ -134,6 +138,7 @@ export class AuthController {
     return res.json({
       jwtAcessToken,
       message: "success",
+      statusCode: HttpStatus,
     });
   }
 

@@ -10,7 +10,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(), // 'bearer 체계를 사용하여 인증 헤더에서 JWT를 찾는 새 추출기 생성
       ignoreExpiration: true,
-      secretOrKey: "SECRET_KEY",
+      secretOrKey: "process.env.JWT_ACCESS_TOKEN_SECRET",
     });
   }
 
