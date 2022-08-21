@@ -25,6 +25,7 @@ function ormConfig(): TypeOrmModuleOptions {
     migrations: commonConf.MIGRATIONS,
     // cli: commonConf.CLI,
     migrationsRun: commonConf.MIGRATIONS_RUN,
+    timezone: "local",
   };
 
   return ormconfig;

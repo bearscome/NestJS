@@ -28,4 +28,9 @@ export class UserService {
     user.password = await bcrypt.hash(user.password, 10);
     return Promise.resolve();
   }
+
+  async deleteUser(username: string): Promise<boolean> {
+    await this.userRepository.delete({ username });
+    return true;
+  }
 }

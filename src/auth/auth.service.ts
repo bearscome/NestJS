@@ -119,6 +119,7 @@ export class AuthService {
       username: providerId,
       password: providerId,
       social_type: provider,
+      gender: "소셜이라 없을수도 있어!",
     };
 
     return this.regiseterNewUser(UserDTO);
@@ -143,5 +144,10 @@ export class AuthService {
     const jwt = await this.validateUser(user);
 
     return jwt.accessToken;
+  }
+
+  async deleteUser(userId: any): Promise<Boolean> {
+    const { username } = userId;
+    return await this.userService.deleteUser(username);
   }
 }

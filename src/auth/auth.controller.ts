@@ -146,12 +146,34 @@ export class AuthController {
   @UseGuards(AuthGuard("jwt"))
   async getUserInfo(@Headers() headers: any): Promise<any> {
     const jwtstring = headers.authorization.split("Bearer ")[1];
-    const userInfo = this.jwtService.verify(jwtstring);
-    const findUser = this.authService.findUser(userInfo);
+    const userInfo = await this.jwtService.verify(jwtstring);
+    const findUser = await this.authService.findUser(userInfo);
 
     console.log(headers.authorization, jwtstring, userInfo, findUser);
 
     return findUser;
+  }
+
+  @Post("delete")
+  @UsePipes(ValidationPipe)
+  @UseGuards(AuthGuard("jwt"))
+  async deleteUser(
+    @Headers() headers: any,
+    @Res() res: Response
+  ): Promise<any> {
+    const jwtstring = headers.authorization.split("Bearer ")[1];
+    const userInfo = await this.jwtService.verify(jwtstring);
+    const findUser = await this.authService.findUser(userInfo);
+
+    const deleteUser = await this.authService.deleteUser(findUser);
+    if (deleteUser) {
+      return res.json({
+        message: "success",
+        statusCode: HttpStatus.OK,
+      });
+    }
+
+    console.log("회원 정보 삭제시켜!");
   }
 
   // 삭제 추가 ->

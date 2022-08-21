@@ -18,12 +18,12 @@ export function NotIn(property: string, validationOptions?: ValidationOptions) {
         validate(value: any, args: ValidationArguments) {
           const [relatedPropertyName] = args.constraints;
           const relatedValue = (args.object as any)[relatedPropertyName];
-          console.warn("property", property);
-          console.log("validationOptions", validationOptions);
-          console.log("object", object);
-          console.log("propertyName", propertyName);
-          console.log("value", value);
-          console.log("args", args);
+          // console.warn("property", property);
+          // console.log("validationOptions", validationOptions);
+          // console.log("object", object);
+          // console.log("propertyName", propertyName);
+          // console.log("value", value);
+          // console.log("args", args);
 
           return (
             typeof value === "string" &&
