@@ -1,13 +1,15 @@
-import { IsNotEmpty } from "class-validator";
+import { IsNotEmpty, IsString } from "class-validator";
+import { NotIn } from "src/testing";
 import { Column } from "typeorm";
 
 export class UserDTO {
-  id?: number;
-
   @IsNotEmpty()
+  @IsString()
+  @NotIn("password", { message: "asdasd" })
   username: string;
 
   @IsNotEmpty()
+  @IsString()
   password: string;
 
   @Column()

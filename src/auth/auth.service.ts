@@ -69,7 +69,7 @@ export class AuthService {
 
   async tokenValidateUser(payload: Payload): Promise<UserDTO | undefined> {
     const userFind = await this.userService.findByFeilds({
-      where: { id: payload.id },
+      where: { username: payload.username },
     });
     this.flatAuthorities(userFind);
     return userFind;

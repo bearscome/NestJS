@@ -153,4 +153,11 @@ export class AuthController {
 
     return findUser;
   }
+
+  // 삭제 추가 ->
+  // 업데이트 추가 -> 회원정보 추가,
+  // filehandle ->
+  // 서브파티 -> pg사 [웹앱 -> api -> pg -> api -> 웹앱]
+  // pm2 -> 포크, 클러스트형 ->
+  // 클러스트형 사용-> 스레드 갯수 만큼 띄어져있음
 }
