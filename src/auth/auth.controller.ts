@@ -24,10 +24,7 @@ import { JwtService } from "@nestjs/jwt";
 
 @Controller("auth")
 export class AuthController {
-  constructor(
-    private authService: AuthService,
-    private jwtService: JwtService
-  ) {}
+  constructor(private authService: AuthService) {}
 
   @Post("/register")
   @UsePipes(ValidationPipe)
@@ -56,8 +53,8 @@ export class AuthController {
   }
 
   @Get("/admin-role")
-  @UseGuards(AuthGuard(), RolesGuard)
-  @Roles(RoleType.ADMIN)
+  // @UseGuards(AuthGuard(), RolesGuard)
+  // @Roles(RoleType.ADMIN)
   adminRole(@Req() req: Request): any {
     const user: any = req.user;
     return user;
@@ -145,11 +142,7 @@ export class AuthController {
   @Get("/getUserInfo")
   @UseGuards(AuthGuard("jwt"))
   async getUserInfo(@Headers() headers: any): Promise<any> {
-    const jwtstring = headers.authorization.split("Bearer ")[1];
-    const userInfo = await this.jwtService.verify(jwtstring);
-    const findUser = await this.authService.findUser(userInfo);
-
-    console.log(headers.authorization, jwtstring, userInfo, findUser);
+    const findUser = await this.authService.jwtFindUser(headers);
 
     return findUser;
   }
@@ -161,11 +154,9 @@ export class AuthController {
     @Headers() headers: any,
     @Res() res: Response
   ): Promise<any> {
-    const jwtstring = headers.authorization.split("Bearer ")[1];
-    const userInfo = await this.jwtService.verify(jwtstring);
-    const findUser = await this.authService.findUser(userInfo);
-
+    const findUser = this.authService.jwtFindUser(headers);
     const deleteUser = await this.authService.deleteUser(findUser);
+
     if (deleteUser) {
       return res.json({
         message: "success",
@@ -184,10 +175,7 @@ export class AuthController {
     @Body() body: any,
     @Res() res: Response
   ) {
-    const jwtstring = headers.authorization.split("Bearer ")[1];
-    const userInfo = await this.jwtService.verify(jwtstring);
-    const findUser = await this.authService.findUser(userInfo);
-
+    const findUser = await this.authService.jwtFindUser(headers);
     const updateUser = await this.authService.updateUser(findUser, body);
 
     console.warn("updateUser", updateUser);

@@ -6,12 +6,13 @@ import {
   Redirect,
   UnauthorizedException,
 } from "@nestjs/common";
-import { UserDTO } from "./dto/user.dto";
+import { UserDTO, UserInfo } from "./dto/user.dto";
 import { UserService } from "./user.service";
 import * as bcrypt from "bcrypt";
 import { User } from "../domain/user.entity";
 import { Payload } from "./payload.interface";
 import { JwtService } from "@nestjs/jwt";
+import { Request } from "express";
 
 @Injectable()
 export class AuthService {
@@ -135,6 +136,15 @@ export class AuthService {
     const findUser: UserDTO = await this.userService.findByFeilds({
       where: { username: userInfo.username },
     });
+
+    return findUser;
+  }
+
+  async jwtFindUser(headers: Request): Promise<UserInfo> {
+    const jwtstring = headers["authorization"];
+    const getjwt = jwtstring.split("Bearer")[1].trim();
+    const userInfo = await this.jwtService.verify(getjwt);
+    const findUser = await this.findUser(userInfo);
 
     return findUser;
   }

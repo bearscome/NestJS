@@ -8,12 +8,14 @@ import { JwtModule } from "@nestjs/jwt";
 import { PassportModule } from "@nestjs/passport";
 import { JwtStrategy } from "./security/passport.jwt.strategy";
 import { UserAuthorityRepository } from "./repository/user-autority.repository";
+import { BoardRepository } from "./board.repository";
 
 @Module({
   imports: [
     TypeOrmExModule.forCustomRepository([
       UserRepository,
       UserAuthorityRepository,
+      BoardRepository,
     ]),
     JwtModule.register({
       secret: "process.env.JWT_ACCESS_TOKEN_SECRET",
@@ -23,7 +25,7 @@ import { UserAuthorityRepository } from "./repository/user-autority.repository";
     }),
     PassportModule.register({ defaultStrategy: "jwt" }), // https://velog.io/@wanzekim/ERROR-ExceptionHandler-metatype-is-not-a-constructor
   ],
-  exports: [TypeOrmExModule],
+  exports: [TypeOrmExModule, AuthService],
   controllers: [AuthController],
   providers: [AuthService, UserService, JwtStrategy],
 })
