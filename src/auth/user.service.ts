@@ -33,4 +33,9 @@ export class UserService {
     await this.userRepository.delete({ username });
     return true;
   }
+
+  async updateUser(updateInfo: any): Promise<any> {
+    await this.userRepository.save(updateInfo);
+    return true;
+  }
 }

@@ -176,6 +176,27 @@ export class AuthController {
     console.log("회원 정보 삭제시켜!");
   }
 
+  @Post("update")
+  @UsePipes(ValidationPipe)
+  @UseGuards(AuthGuard("jwt"))
+  async updateUser(
+    @Headers() headers: any,
+    @Body() body: any,
+    @Res() res: Response
+  ) {
+    const jwtstring = headers.authorization.split("Bearer ")[1];
+    const userInfo = await this.jwtService.verify(jwtstring);
+    const findUser = await this.authService.findUser(userInfo);
+
+    const updateUser = await this.authService.updateUser(findUser, body);
+
+    console.warn("updateUser", updateUser);
+
+    if (updateUser.success) {
+      return res.json(updateUser);
+    }
+  }
+
   // 삭제 추가 ->
   // 업데이트 추가 -> 회원정보 추가,
   // filehandle ->
