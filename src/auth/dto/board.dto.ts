@@ -1,4 +1,4 @@
-import { Transform } from "class-transformer";
+import { Transform, Type } from "class-transformer";
 import { IsNumber, IsString, MaxLength } from "class-validator";
 
 export class BoardDTO {
@@ -20,4 +20,14 @@ export class CreateBoardDTO extends BoardDTO {
 export class UpdateBoardDTO extends BoardDTO {
   @IsString()
   id: string;
+}
+
+export class GetHistoryBoardDTO {
+  @IsNumber()
+  @Type(() => Number)
+  limit:number;
+
+  @IsNumber()
+  @Type(() => Number)
+  offset:number;
 }

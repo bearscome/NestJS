@@ -9,12 +9,18 @@ import {
   Res,
   UsePipes,
   ValidationPipe,
+  Get,
+  Req,
+  Param,
+  Query,
+  DefaultValuePipe,
 } from "@nestjs/common";
 import { Request, Response } from "express";
 import { AuthService } from "src/auth/auth.service";
 import {
   BoardDTO,
   CreateBoardDTO,
+  GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
 import { BoardService } from "./board.service";
@@ -113,5 +119,18 @@ export class BoardController {
     } catch (err) {
       throw new HttpException(err, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+  }
+
+  @Get("history")
+  @UsePipes(new ValidationPipe({ transform: true }))
+  // query로 넘어올 시 스트링으로 들어오니ㅏ, Validation안에 있는 transform을 true로 변경한 뒤,
+  // DTO에서 @Type(() => Number)로 수정하면 넘버형으로 변견된다
+  // async findAll(@Query() getHistory:GetHistoryBoardDTO) {
+  // const { offset, limit } = getHistory;
+  async findAll(
+    @Query("offset", new DefaultValuePipe(0), ParseIntPipe) offset: number,
+    @Query("limit", new DefaultValuePipe(10), ParseIntPipe) limit: number
+  ) {
+    return await this.boardService.history({ offset, limit });
   }
 }

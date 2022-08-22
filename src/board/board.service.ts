@@ -4,6 +4,7 @@ import { BoardRepository } from "src/auth/board.repository";
 import {
   BoardDTO,
   CreateBoardDTO,
+  GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
 
@@ -85,9 +86,6 @@ export class BoardService {
       content,
     };
 
-    console.log(data);
-    console.log("22222222222222", updateBoardDTO);
-
     try {
       result = await this.boardRepository.save(data).then(() => {
         return {
@@ -103,5 +101,46 @@ export class BoardService {
       result.message = "알수없는 오류가 발생하였습니다.";
       return result;
     }
+  }
+
+  async history({ offset, limit }: GetHistoryBoardDTO) {
+    let result: {
+      status: number;
+      message: string;
+      result: Array<BoardDTO | []>;
+      total: number;
+    } = {
+      status: 0,
+      message: "",
+      result: [],
+      total: 0,
+    };
+
+    try {
+      result = await this.boardRepository
+        .findAndCount({
+          skip: offset,
+          take: limit,
+        })
+        .then(([_result, _total]) => {
+          if (_result.length < 1) {
+            result.status = 4001;
+            result.message = "존재하지 않는 게시물 입니다.";
+          } else {
+            result.status = 4000;
+            result.message = "조회가 완료되었습니다.";
+            result.total = _total;
+            result.result = _result;
+          }
+          return result;
+        });
+    } catch (err) {
+      console.error("histroy_ERR", err);
+      result.status = 4999;
+      result.message = "알수없는 오류가 발생하였습니다.";
+      return result;
+    }
+
+    return result;
   }
 }

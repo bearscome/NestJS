@@ -9,6 +9,7 @@ import { PassportModule } from "@nestjs/passport";
 import { JwtStrategy } from "./security/passport.jwt.strategy";
 import { UserAuthorityRepository } from "./repository/user-autority.repository";
 import { BoardRepository } from "./board.repository";
+import { BoardCommentRepository } from "./board.comment.repository";
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { BoardRepository } from "./board.repository";
       UserRepository,
       UserAuthorityRepository,
       BoardRepository,
+      BoardCommentRepository,
     ]),
     JwtModule.register({
       secret: "process.env.JWT_ACCESS_TOKEN_SECRET",

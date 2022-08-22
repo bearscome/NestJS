@@ -4,29 +4,24 @@ import {
   CreateDateColumn,
   Entity,
   ManyToOne,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
-import { BoardCommentEntity } from "./board.comment.entity";
+import { Board } from "./board.entity";
 
-@Entity("board")
-export class Board {
+@Entity("boardComment")
+export class BoardCommentEntity {
   @PrimaryGeneratedColumn()
   @IsNotEmpty()
-  borad_id: number;
+  comment_id: number;
 
   @Column({ length: 50 })
   @IsNotEmpty()
   writer: string;
 
-  @Column({ length: 50 })
-  @IsNotEmpty()
-  title: string;
-
   @Column({ length: 1000 })
   @IsNotEmpty()
-  content: string;
+  comment: string;
 
   @CreateDateColumn()
   createAt: string;
@@ -34,6 +29,6 @@ export class Board {
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
 
-  @OneToMany(() => BoardCommentEntity, (comments) => comments.comment)
-  comments: BoardCommentEntity[];
+  @ManyToOne(() => Board, (board) => board.comments)
+  board: Board;
 }
