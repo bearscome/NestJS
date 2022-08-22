@@ -4,18 +4,19 @@ import {
   Headers,
   HttpException,
   HttpStatus,
-  InternalServerErrorException,
-  Module,
   ParseIntPipe,
   Post,
   Res,
-  UseGuards,
   UsePipes,
   ValidationPipe,
 } from "@nestjs/common";
 import { Request, Response } from "express";
 import { AuthService } from "src/auth/auth.service";
-import { BoardDTO, CreateBoardDTO } from "src/auth/dto/board.dto";
+import {
+  BoardDTO,
+  CreateBoardDTO,
+  UpdateBoardDTO,
+} from "src/auth/dto/board.dto";
 import { BoardService } from "./board.service";
 
 @Controller("board")
@@ -27,11 +28,11 @@ export class BoardController {
   ) {}
   @Post("/create")
   async createBoard(
-    @Headers() request: Request,
+    @Headers() header: any,
     @Body() boardDTO: BoardDTO,
     @Res() res: Response
   ) {
-    const findUser = await this.authService.jwtFindUser(request);
+    const findUser = await this.authService.jwtFindUser(header);
     const { id, username } = findUser; // 회원 아이디, 회원 primaryKey
     const { title, content } = boardDTO;
 
@@ -57,7 +58,6 @@ export class BoardController {
   @Post("/delete")
   async deleteBoard(@Body("id", ParseIntPipe) board_id: number): Promise<any> {
     // 게시글 삭제
-    console.log(board_id);
     try {
       const reulst = await this.boardService.deleteBoard(board_id).then((r) => {
         if (r.status === 4000) {
@@ -85,7 +85,33 @@ export class BoardController {
   }
 
   @Post("/update")
-  async updateBoard() {
+  async updateBoard(@Body() updateBoardDTO: UpdateBoardDTO) {
     // 게시글 업데이트
+    try {
+      const result = await this.boardService
+        .updateBoard(updateBoardDTO)
+        .then((r) => {
+          if (r.status === 4000) {
+            return {
+              ...r,
+              statusCode: HttpStatus.ACCEPTED,
+            };
+          } else if (r.status === 4001) {
+            return {
+              ...r,
+              statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
+            };
+          } else {
+            return {
+              ...r,
+              statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
+            };
+          }
+        });
+
+      return result;
+    } catch (err) {
+      throw new HttpException(err, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
   }
 }

@@ -1,7 +1,11 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { BoardRepository } from "src/auth/board.repository";
-import { BoardDTO, CreateBoardDTO } from "src/auth/dto/board.dto";
+import {
+  BoardDTO,
+  CreateBoardDTO,
+  UpdateBoardDTO,
+} from "src/auth/dto/board.dto";
 
 @Injectable()
 export class BoardService {
@@ -14,6 +18,7 @@ export class BoardService {
     const findBoard = await this.boardRepository.findOne({
       where: { borad_id },
     });
+    console.warn("findBoard", findBoard);
 
     return findBoard;
   }
@@ -55,7 +60,48 @@ export class BoardService {
       return result;
     }
   }
-  async updateBoard(id: number) {
+
+  async updateBoard(updateBoardDTO: UpdateBoardDTO) {
     // 게시글 수정 서비스 로직
+    const { id, title, content } = updateBoardDTO;
+    let result: { status: number; message: string } = {
+      status: 0,
+      message: "",
+    };
+
+    const boardInfo = await this.findBoard(Number(id));
+
+    console.log("boardInfoboardInfo", boardInfo);
+
+    if (!boardInfo) {
+      result.status = 4001;
+      result.message = "존재하지 않는 게시물 입니다.";
+      return result;
+    }
+
+    const data = {
+      ...boardInfo,
+      title,
+      content,
+    };
+
+    console.log(data);
+    console.log("22222222222222", updateBoardDTO);
+
+    try {
+      result = await this.boardRepository.save(data).then(() => {
+        return {
+          status: 4000,
+          message: "삭제 완료되었습니다.",
+        };
+      });
+
+      return result;
+    } catch (err) {
+      console.error("deleteBoard_ERR", err);
+      result.status = 4999;
+      result.message = "알수없는 오류가 발생하였습니다.";
+      return result;
+    }
   }
 }
