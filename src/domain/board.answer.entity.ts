@@ -6,6 +6,7 @@ import {
   UpdateDateColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
+  JoinColumn,
 } from "typeorm";
 import { Board } from "./board.entity";
 
@@ -37,5 +38,6 @@ export class BoardAnswer {
   updateAt: string;
 
   @ManyToOne((type) => Board, ({ answers }) => answers)
+  @JoinColumn({ name: "group_id" })
   group_id: Board;
 }

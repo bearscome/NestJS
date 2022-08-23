@@ -2,14 +2,12 @@ import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { BoardCommentRepository } from "src/auth/board.comment.repository";
 import { BoardRepository } from "src/auth/board.repository";
-import { BoardCommentDTO } from "src/auth/dto/board.comment.dto";
 import {
   BoardDTO,
   CreateBoardDTO,
   GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
-import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
 import { BoardAnswerRepository } from "./repository/board.answer.repository";
 
 @Injectable()

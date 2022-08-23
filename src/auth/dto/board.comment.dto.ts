@@ -9,5 +9,5 @@ export class BoardCommentDTO {
 
   @IsNotEmpty()
   @IsString()
-  comment: string;
+  content: string;
 }

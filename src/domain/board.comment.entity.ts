@@ -3,6 +3,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -21,7 +22,7 @@ export class BoardCommentEntity {
 
   @Column({ length: 1000 })
   @IsNotEmpty()
-  comment: string;
+  content: string;
 
   @CreateDateColumn()
   createAt: string;
@@ -29,6 +30,8 @@ export class BoardCommentEntity {
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
 
-  @ManyToOne((type) => Board, ({ comments }) => comments)
+  @ManyToOne(() => Board, ({ comments }) => comments)
+  @JoinColumn({ name: "board_id" })
+  //컬럼명 선언 안할 시 자동으로 선언됨 -> boardBoardId propertyName + referencedColumnName
   board_id: Board;
 }

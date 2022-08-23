@@ -152,12 +152,12 @@ export class BoardController {
   ) {
     const findUser = await this.authService.jwtFindUser(header);
     const { username } = findUser;
-    const { board_id, comment } = boardCommentDTO;
+    const { board_id, content } = boardCommentDTO;
 
     const inserData = {
       username,
       board_id,
-      comment,
+      content,
     };
 
     return await this.boardService.addComment(inserData);
