@@ -23,11 +23,10 @@ import { BoardCommentDTO } from "src/auth/dto/board.comment.dto";
 import {
   BoardDTO,
   CreateBoardDTO,
-  GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
-import { BoardCommentEntity } from "src/domain/board.comment.entity";
 import { BoardService } from "./board.service";
+import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
 
 @Controller("board")
 @UsePipes(new ValidationPipe())
@@ -128,7 +127,7 @@ export class BoardController {
 
   @Get("history")
   @UsePipes(new ValidationPipe({ transform: true }))
-  // query로 넘어올 시 스트링으로 들어오니ㅏ, Validation안에 있는 transform을 true로 변경한 뒤,
+  // query로 넘어올 시 스트링으로 들어오나, Validation안에 있는 transform을 true로 변경한 뒤,
   // DTO에서 @Type(() => Number)로 수정하면 넘버형으로 변견된다
   // async findAll(@Query() getHistory:GetHistoryBoardDTO) {
   // const { offset, limit } = getHistory;
@@ -162,5 +161,21 @@ export class BoardController {
     };
 
     return await this.boardService.addComment(inserData);
+  }
+
+  @Post("answer/create")
+  @UseGuards(AuthGuard("jwt"))
+  async createAnser(
+    @Headers() header: any,
+    @Body() boardAnswerDTO: BoardAnswerDTO
+  ) {
+    const findUser = await this.authService.jwtFindUser(header);
+    const { username } = findUser;
+    const addData: BoardAnswerAddDTD = {
+      username,
+      ...boardAnswerDTO,
+    };
+
+    await this.boardService.addAnswer(addData);
   }
 }

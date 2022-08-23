@@ -9,7 +9,7 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 import { BoardCommentEntity } from "./board.comment.entity";
-import { BoardAnswer } from "./board.repley.entity";
+import { BoardAnswer } from "./board.answer.entity";
 
 @Entity("board")
 export class Board {
@@ -43,8 +43,11 @@ export class Board {
   // eager?: boolean;
   // Lazy Loading이란 지연 로딩이라고 불리며, Eager Loading과는 다르게 필요한 순간에만 데이터를 가져옵니다.
   // lazy?: boolean
+  // https://tristy.tistory.com/36
   comments: BoardCommentEntity[];
 
-  @OneToMany((type) => BoardAnswer, ({ answer_id }) => answer_id)
+  @OneToMany((type) => BoardAnswer, ({ group_id }) => group_id, {
+    eager: true,
+  })
   answers: BoardAnswer[];
 }

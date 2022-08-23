@@ -14,15 +14,12 @@ export class BoardAnswer {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne((type) => Board, ({ answers }) => answers)
-  answer_id: Board;
-
   @Column()
-  @IsNumber()
+  @IsNotEmpty()
   step: number;
 
   @Column()
-  @IsNumber()
+  @IsNotEmpty()
   indent: number;
 
   @Column({ length: 50 })
@@ -31,11 +28,14 @@ export class BoardAnswer {
 
   @Column({ length: 1000 })
   @IsNotEmpty()
-  comment: string;
+  content: string;
 
   @CreateDateColumn()
   createAt: string;
 
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
+
+  @ManyToOne((type) => Board, ({ answers }) => answers)
+  group_id: Board;
 }

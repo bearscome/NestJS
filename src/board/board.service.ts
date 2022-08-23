@@ -9,13 +9,17 @@ import {
   GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
+import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
+import { BoardAnswerRepository } from "./repository/board.answer.repository";
 
 @Injectable()
 export class BoardService {
   constructor(
     @InjectRepository(BoardRepository) private boardRepository: BoardRepository,
     @InjectRepository(BoardCommentRepository)
-    private commentRepository: BoardRepository
+    private commentRepository: BoardRepository,
+    @InjectRepository(BoardAnswerRepository)
+    private boardAnswerRepository: BoardAnswerRepository
   ) {}
 
   /**
@@ -162,5 +166,9 @@ export class BoardService {
      * 댓글 내용
      */
     return await this.commentRepository.save(insertData);
+  }
+
+  async addAnswer(addData) {
+    await this.boardAnswerRepository.save(addData);
   }
 }
