@@ -1,23 +1,33 @@
-import { IsNotEmpty } from "class-validator";
+import { IsNotEmpty, IsNumber } from "class-validator";
 import {
   Column,
-  CreateDateColumn,
   Entity,
+  CreateDateColumn,
+  UpdateDateColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
-  UpdateDateColumn,
 } from "typeorm";
 import { Board } from "./board.entity";
 
-@Entity("boardComment")
-export class BoardCommentEntity {
+@Entity("answer")
+export class BoardAnswer {
   @PrimaryGeneratedColumn()
-  @IsNotEmpty()
-  comment_id: number;
+  id: number;
+
+  @ManyToOne((type) => Board, ({ answers }) => answers)
+  answer_id: Board;
+
+  @Column()
+  @IsNumber()
+  step: number;
+
+  @Column()
+  @IsNumber()
+  indent: number;
 
   @Column({ length: 50 })
   @IsNotEmpty()
-  username: string;
+  username: String;
 
   @Column({ length: 1000 })
   @IsNotEmpty()
@@ -28,7 +38,4 @@ export class BoardCommentEntity {
 
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
-
-  @ManyToOne((type) => Board, ({ comments }) => comments)
-  board_id: Board;
 }

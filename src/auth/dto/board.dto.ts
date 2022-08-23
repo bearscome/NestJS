@@ -14,7 +14,7 @@ export class BoardDTO {
 export class CreateBoardDTO extends BoardDTO {
   @IsString()
   @MaxLength(50)
-  writer: string;
+  username: string;
 }
 
 export class UpdateBoardDTO extends BoardDTO {
@@ -25,9 +25,9 @@ export class UpdateBoardDTO extends BoardDTO {
 export class GetHistoryBoardDTO {
   @IsNumber()
   @Type(() => Number)
-  limit:number;
+  limit: number;
 
   @IsNumber()
   @Type(() => Number)
-  offset:number;
+  offset: number;
 }

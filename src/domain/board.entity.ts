@@ -9,16 +9,18 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 import { BoardCommentEntity } from "./board.comment.entity";
+import { BoardAnswer } from "./board.repley.entity";
 
 @Entity("board")
 export class Board {
   @PrimaryGeneratedColumn()
   @IsNotEmpty()
   borad_id: number;
+  //OneToMany를 사용하면 PrimaryGeneratedColumn이 외래키가 된다.
 
   @Column({ length: 50 })
   @IsNotEmpty()
-  writer: string;
+  username: string;
 
   @Column({ length: 50 })
   @IsNotEmpty()
@@ -42,4 +44,7 @@ export class Board {
   // Lazy Loading이란 지연 로딩이라고 불리며, Eager Loading과는 다르게 필요한 순간에만 데이터를 가져옵니다.
   // lazy?: boolean
   comments: BoardCommentEntity[];
+
+  @OneToMany((type) => BoardAnswer, ({ answer_id }) => answer_id)
+  answers: BoardAnswer[];
 }

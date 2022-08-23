@@ -48,7 +48,7 @@ export class BoardController {
     const { title, content } = boardDTO;
 
     const data: CreateBoardDTO = {
-      writer: username,
+      username,
       title,
       content,
     };
@@ -156,7 +156,7 @@ export class BoardController {
     const { board_id, comment } = boardCommentDTO;
 
     const inserData = {
-      writer: username,
+      username,
       board_id,
       comment,
     };
