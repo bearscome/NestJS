@@ -14,15 +14,19 @@ import {
   Param,
   Query,
   DefaultValuePipe,
+  UseGuards,
 } from "@nestjs/common";
+import { AuthGuard } from "@nestjs/passport";
 import { Request, Response } from "express";
 import { AuthService } from "src/auth/auth.service";
+import { BoardCommentDTO } from "src/auth/dto/board.comment.dto";
 import {
   BoardDTO,
   CreateBoardDTO,
   GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
+import { BoardCommentEntity } from "src/domain/board.comment.entity";
 import { BoardService } from "./board.service";
 
 @Controller("board")
@@ -33,6 +37,7 @@ export class BoardController {
     private authService: AuthService
   ) {}
   @Post("/create")
+  @UseGuards(AuthGuard("jwt"))
   async createBoard(
     @Headers() header: any,
     @Body() boardDTO: BoardDTO,
@@ -132,5 +137,30 @@ export class BoardController {
     @Query("limit", new DefaultValuePipe(10), ParseIntPipe) limit: number
   ) {
     return await this.boardService.history({ offset, limit });
+  }
+
+  @Get("histroy/detail")
+  async findOne(@Query("id", ParseIntPipe) id: number) {
+    return await this.boardService.findBoard(id);
+  }
+
+  @Post("history/comment")
+  @UseGuards(AuthGuard("jwt"))
+  @UsePipes(new ValidationPipe({ transform: true }))
+  async addComment(
+    @Headers() header: any,
+    @Body() boardCommentDTO: BoardCommentDTO
+  ) {
+    const findUser = await this.authService.jwtFindUser(header);
+    const { username } = findUser;
+    const { board_id, comment } = boardCommentDTO;
+
+    const inserData = {
+      writer: username,
+      board_id,
+      comment,
+    };
+
+    return await this.boardService.addComment(inserData);
   }
 }

@@ -23,10 +23,10 @@ export class User {
   @IsNotEmpty()
   password: string;
 
-  @OneToMany(() => UserAuthority, (userAuthority) => userAuthority.user, {
-    eager: true,
-  })
-  authorities?: any[];
+  // @OneToMany(() => UserAuthority, (userAuthority) => userAuthority.user, {
+  //   eager: true,
+  // })
+  // authorities?: any[];
 
   @Column()
   social_type: string;

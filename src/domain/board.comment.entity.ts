@@ -29,6 +29,6 @@ export class BoardCommentEntity {
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
 
-  @ManyToOne(() => Board, (board) => board.comments)
-  board: Board;
+  @ManyToOne((type) => Board, ({ comments }) => comments)
+  board_id: Board;
 }

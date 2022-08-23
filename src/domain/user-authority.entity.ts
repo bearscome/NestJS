@@ -18,7 +18,7 @@ export class UserAuthority {
   @Column("varchar", { name: "authority_name" })
   authorityName: string;
 
-  @ManyToOne((type) => User, (user) => user.authorities)
+  // @ManyToOne((type) => User, (user) => user.authorities)
   @JoinColumn({ name: "id" })
   user: User;
 }

@@ -60,7 +60,7 @@ export class AuthService {
     const payload: Payload = {
       id: findUser.id,
       username: findUser.username,
-      authorities: findUser.authorities,
+      // authorities: findUser.authorities,
     };
 
     return {

@@ -34,6 +34,12 @@ export class Board {
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
 
-  @OneToMany(() => BoardCommentEntity, (comments) => comments.comment)
+  @OneToMany((type) => BoardCommentEntity, ({ board_id }) => board_id, {
+    lazy: true,
+  })
+  // Eager Loading이란 즉시 로딩이라고 불리우며, 로딩 시 참조해야 하는 정보를 미리 전부 가져옵니다.
+  // eager?: boolean;
+  // Lazy Loading이란 지연 로딩이라고 불리며, Eager Loading과는 다르게 필요한 순간에만 데이터를 가져옵니다.
+  // lazy?: boolean
   comments: BoardCommentEntity[];
 }

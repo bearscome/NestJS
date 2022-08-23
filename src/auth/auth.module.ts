@@ -15,7 +15,7 @@ import { BoardCommentRepository } from "./board.comment.repository";
   imports: [
     TypeOrmExModule.forCustomRepository([
       UserRepository,
-      UserAuthorityRepository,
+      // UserAuthorityRepository,
       BoardRepository,
       BoardCommentRepository,
     ]),
