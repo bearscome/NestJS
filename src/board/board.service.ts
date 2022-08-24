@@ -32,6 +32,8 @@ export class BoardService {
       where: { borad_id },
     });
     const comment = await findBoard.comments;
+
+    console.warn("findBoard", findBoard);
     // Javascript 혹은 Node.js에서는 Lazy Loading을 사용하기 위해서는 Promise가 사용됩니다. 이것은 비표준 방법이며 TypeOrm에서의 실험적인 기능입니다.
     return findBoard;
   }

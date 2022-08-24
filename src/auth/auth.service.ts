@@ -34,7 +34,7 @@ export class AuthService {
 
   async validateUser(
     user: UserDTO
-  ): Promise<{ accessToken: string } | undefined> {
+  ): Promise<{ accessToken: string; user: UserDTO } | undefined> {
     let findUser: User = await this.userService.findByFeilds({
       where: { username: user.username },
     });
@@ -65,6 +65,7 @@ export class AuthService {
 
     return {
       accessToken: this.jwtService.sign(payload),
+      user: findUser,
     };
   }
 

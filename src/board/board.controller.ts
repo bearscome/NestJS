@@ -15,9 +15,14 @@ import {
   Query,
   DefaultValuePipe,
   UseGuards,
+  UseInterceptors,
+  UploadedFile,
 } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
+import { FileInterceptor } from "@nestjs/platform-express";
 import { Request, Response } from "express";
+import { diskStorage } from "multer";
+import { extname } from "path";
 import { AuthService } from "src/auth/auth.service";
 import { BoardCommentDTO } from "src/auth/dto/board.comment.dto";
 import {
@@ -35,22 +40,41 @@ export class BoardController {
     private boardService: BoardService,
     private authService: AuthService
   ) {}
+
   @Post("/create")
   @UseGuards(AuthGuard("jwt"))
+  @UseInterceptors(
+    FileInterceptor("file", {
+      // dest: "public",
+      storage: diskStorage({
+        destination: "./public",
+        filename(req, file, callback) {
+          const uniqId = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
+          const ext = extname(file.originalname);
+          const filename = `${uniqId}${ext}`;
+          callback(null, filename);
+        },
+      }),
+    })
+  )
   async createBoard(
     @Headers() header: any,
     @Body() boardDTO: BoardDTO,
-    @Res() res: Response
+    @Res() res: Response,
+    @UploadedFile() file: any
   ) {
     const findUser = await this.authService.jwtFindUser(header);
     const { id, username } = findUser; // 회원 아이디, 회원 primaryKey
     const { title, content } = boardDTO;
+    // const { path, filename } = file && file;
 
     const data: CreateBoardDTO = {
       username,
       title,
       content,
+      image_path: file ? file?.path : null,
     };
+
     try {
       await this.boardService
         .createBoard(data)

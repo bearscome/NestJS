@@ -15,6 +15,7 @@ export class CreateBoardDTO extends BoardDTO {
   @IsString()
   @MaxLength(50)
   username: string;
+  image_path?: string;
 }
 
 export class UpdateBoardDTO extends BoardDTO {

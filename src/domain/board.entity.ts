@@ -36,6 +36,9 @@ export class Board {
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
 
+  @Column()
+  image_path: string;
+
   @OneToMany((type) => BoardCommentEntity, ({ board_id }) => board_id, {
     lazy: true,
   })

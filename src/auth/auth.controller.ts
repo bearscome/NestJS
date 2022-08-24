@@ -39,7 +39,7 @@ export class AuthController {
   async login(@Body() userDTO: UserDTO, @Res() res: Response): Promise<any> {
     const jwt = await this.authService.validateUser(userDTO);
     return res.json({
-      jwt: jwt.accessToken,
+      ...jwt,
       message: "success",
       statusCode: HttpStatus.OK,
     });
