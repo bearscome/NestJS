@@ -136,6 +136,7 @@ export class BoardService {
         .findAndCount({
           skip: offset,
           take: limit,
+          order: { borad_id: "DESC" },
         })
         .then(([_result, _total]) => {
           if (_result.length < 1) {
