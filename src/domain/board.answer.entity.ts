@@ -37,7 +37,7 @@ export class BoardAnswer {
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
 
-  @ManyToOne((type) => Board, ({ answers }) => answers)
-  @JoinColumn({ name: "group_id" })
-  group_id: Board;
+  // @ManyToOne((type) => Board, ({ answers }) => answers)
+  // @JoinColumn({ name: "group_id" })
+  // group_id: Board;
 }

@@ -30,6 +30,7 @@ import {
   CreateBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
+import { Board } from "src/domain/board.entity";
 import { BoardService } from "./board.service";
 import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
 
@@ -189,17 +190,44 @@ export class BoardController {
 
   @Post("answer/create")
   @UseGuards(AuthGuard("jwt"))
+  @UseInterceptors(
+    FileInterceptor("file", {
+      storage: diskStorage({
+        destination: "./public",
+        filename(req, file, callback) {
+          const uniqId = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
+          const ext = extname(file.originalname);
+          const filename = `${uniqId}${ext}`;
+          callback(null, filename);
+        },
+      }),
+    })
+  )
   async createAnser(
     @Headers() header: any,
-    @Body() boardAnswerDTO: BoardAnswerDTO
-  ) {
+    @Body() boardAnswerDTO: BoardAnswerAddDTD,
+    @UploadedFile() file: any,
+    @Res() res: Response
+  ): Promise<any> {
     const findUser = await this.authService.jwtFindUser(header);
     const { username } = findUser;
+
     const addData: BoardAnswerAddDTD = {
       username,
+      image_path: file ? file?.path : null,
       ...boardAnswerDTO,
     };
 
-    await this.boardService.addAnswer(addData);
+    return await this.boardService
+      .addAnswer(addData)
+      .then(() => {
+        res.json({ message: "success", statusCode: HttpStatus.CREATED });
+      })
+      .catch(() => {
+        res.json({
+          message: "fail",
+          statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
+        });
+      });
   }
 }

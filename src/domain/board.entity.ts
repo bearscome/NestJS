@@ -1,4 +1,4 @@
-import { IsNotEmpty } from "class-validator";
+import { IsNotEmpty, IsNumber, IsString } from "class-validator";
 import {
   Column,
   CreateDateColumn,
@@ -36,8 +36,8 @@ export class Board {
   @UpdateDateColumn({ type: "timestamp" })
   updateAt: string;
 
-  @Column()
-  image_path: string;
+  @Column({ nullable: true })
+  image_path?: string;
 
   @OneToMany((type) => BoardCommentEntity, ({ board_id }) => board_id, {
     lazy: true,
@@ -49,8 +49,24 @@ export class Board {
   // https://tristy.tistory.com/36
   comments: BoardCommentEntity[];
 
-  @OneToMany((type) => BoardAnswer, ({ group_id }) => group_id, {
-    eager: true,
-  })
-  answers: BoardAnswer[];
+  // 답변글 분리하려고 했으나, 계층형을 한 번 만들어보자
+  // @OneToMany((type) => BoardAnswer, ({ group_id }) => group_id, {
+  //   eager: true,
+  // })
+  // answers: BoardAnswer[];
+
+  @Column()
+  @IsNumber()
+  @IsNotEmpty()
+  ref: number;
+
+  @Column()
+  @IsNumber()
+  @IsNotEmpty()
+  orderby: number;
+
+  @Column()
+  @IsNumber()
+  @IsNotEmpty()
+  indent: number;
 }

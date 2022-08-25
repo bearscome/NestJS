@@ -8,6 +8,8 @@ import {
   GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
+import { Board } from "src/domain/board.entity";
+import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
 import { BoardAnswerRepository } from "./repository/board.answer.repository";
 
 @Injectable()
@@ -38,11 +40,16 @@ export class BoardService {
     return findBoard;
   }
 
+  async refCountBy(ref: number): Promise<number> {
+    return await this.boardRepository.countBy({ ref });
+  }
+
   async createBoard(createBoardDTO: CreateBoardDTO): Promise<CreateBoardDTO> {
     console.log(createBoardDTO);
     return await this.boardRepository.save(createBoardDTO);
     // 게시글 생성 서비스 로직
   }
+
   async deleteBoard(board_id: number) {
     // return await this.boardRepository.delete()
     // 게시글 삭제 서비스 로직
@@ -132,24 +139,45 @@ export class BoardService {
     };
 
     try {
-      result = await this.boardRepository
-        .findAndCount({
-          skip: offset,
-          take: limit,
-          order: { borad_id: "DESC" },
-        })
-        .then(([_result, _total]) => {
-          if (_result.length < 1) {
-            result.status = 4001;
-            result.message = "존재하지 않는 게시물 입니다.";
-          } else {
-            result.status = 4000;
-            result.message = "조회가 완료되었습니다.";
-            result.total = _total;
-            result.result = _result;
-          }
-          return result;
-        });
+      const boardData = await this.boardRepository.manager.query(
+        `SELECT * FROM board ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
+      );
+      const boardCount = await this.boardRepository.count();
+
+      if (boardData.length < 1) {
+        result.status = 4001;
+        result.message = "게시물이 없습니다.";
+      }
+
+      result.status = 4000;
+      result.message = "조회가 완료되었습니다.";
+      result.total = boardCount;
+      result.result = boardData;
+
+      // console.log("CUSTOM_ORDER_BY", test);
+      //`SELECT * FROM board ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby`
+
+      // result = await this.boardRepository
+      //   .findAndCount({
+      //     skip: offset,
+      //     take: limit,
+      //     order: { ref: "DESC", orderby: "ASC" },
+      //     // order: { borad_id: "DESC" },
+      //     // ASC: 오름차순 1,2,3
+      //     // DESC: 내림차순 33,32,31
+      //   })
+      //   .then(([_result, _total]) => {
+      //     if (_result.length < 1) {
+      //       result.status = 4001;
+      //       result.message = "존재하지 않는 게시물 입니다.";
+      //     } else {
+      //       result.status = 4000;
+      //       result.message = "조회가 완료되었습니다.";
+      //       result.total = _total;
+      //       result.result = _result;
+      //     }
+      //     return result;
+      //   });
     } catch (err) {
       console.error("histroy_ERR", err);
       result.status = 4999;
@@ -169,7 +197,21 @@ export class BoardService {
     return await this.commentRepository.save(insertData);
   }
 
-  async addAnswer(addData) {
-    await this.boardAnswerRepository.save(addData);
+  async addAnswer(addAnswerDto: BoardAnswerAddDTD): Promise<Board> {
+    // https://whitemackerel.tistory.com/55
+    const { board_id, username, title, content, indent } = addAnswerDto;
+    // const data = await this.findBoard(board_id);
+    const refCount = await this.refCountBy(board_id);
+    const setOrderBy = refCount + 1;
+    const insertData = {
+      username,
+      title,
+      content,
+      indent,
+      ref: board_id,
+      orderby: setOrderBy,
+    };
+    console.log("add", insertData);
+    return await this.boardRepository.save(insertData);
   }
 }
