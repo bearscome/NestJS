@@ -1,4 +1,5 @@
-import { IsNotEmpty, IsString, Matches } from "class-validator";
+import { HttpStatus } from "@nestjs/common";
+import { IsNotEmpty, IsNumber, IsString, Matches } from "class-validator";
 import { User } from "src/domain/user.entity";
 import { NotIn } from "src/testing";
 import { Column } from "typeorm";
@@ -23,3 +24,18 @@ export class UserDTO {
 }
 
 export class UserInfo extends User {}
+
+export class Jwt {
+  @IsString()
+  jwt: string;
+}
+
+export class ResponseData {
+  @IsString()
+  message: string;
+
+  @IsNumber()
+  statusCode: HttpStatus;
+}
+
+export class UserJWT extends ResponseData {}

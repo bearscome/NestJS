@@ -22,7 +22,7 @@ export class AuthService {
   ) {}
 
   async regiseterNewUser(newUser: UserDTO): Promise<UserDTO> {
-    let findUser: UserDTO = await this.userService.findByFeilds({
+    let findUser: User = await this.userService.findByFeilds({
       where: { username: newUser.username },
     });
     if (findUser) {
@@ -34,7 +34,7 @@ export class AuthService {
 
   async validateUser(
     user: UserDTO
-  ): Promise<{ accessToken: string; user: UserDTO } | undefined> {
+  ): Promise<{ accessToken: string; user: User } | undefined> {
     let findUser: User = await this.userService.findByFeilds({
       where: { username: user.username },
     });
@@ -55,7 +55,7 @@ export class AuthService {
       );
     }
 
-    this.convertInAuthorities(findUser);
+    // this.convertInAuthorities(findUser);
 
     const payload: Payload = {
       id: findUser.id,
@@ -127,25 +127,19 @@ export class AuthService {
     return this.regiseterNewUser(UserDTO);
   }
 
-  async findUser(userInfo: {
-    id: number;
-    username: string;
-    authorities: [];
-    iat: number;
-    exp: number;
-  }): Promise<any> {
-    const findUser: UserDTO = await this.userService.findByFeilds({
-      where: { username: userInfo.username },
+  async findUser(username: string): Promise<User> {
+    const findUser: User = await this.userService.findByFeilds({
+      where: { username },
     });
 
     return findUser;
   }
 
-  async jwtFindUser(headers: Request): Promise<UserInfo> {
+  async jwtFindUser(headers: Headers): Promise<User | undefined> {
     const jwtstring = headers["authorization"];
     const getjwt = jwtstring.split("Bearer")[1].trim();
     const userInfo = await this.jwtService.verify(getjwt);
-    const findUser = await this.findUser(userInfo);
+    const findUser = await this.findUser(userInfo.username);
 
     return findUser;
   }
@@ -157,25 +151,26 @@ export class AuthService {
     return jwt.accessToken;
   }
 
-  async deleteUser(userId: any): Promise<Boolean> {
+  async deleteUser(userId: User): Promise<Boolean> {
     const { username } = userId;
     return await this.userService.deleteUser(username);
   }
 
-  async updateUser(userInfo: any, body: any): Promise<any> {
+  async updateUser(
+    username: string,
+    gender: string
+  ): Promise<{ success: boolean; user: User }> {
     // update의 경우 query를 넘겨주고 있는 것일뿐 entity는 체크하지 않는다.
     // 따라서 update가 아닌 save로 해야한다
     // save(): 데이터가 존재하지 않는다면 insert, 있다면 update
     // save() : If entity does not exist in the database then inserts, otherwise updates.
     // https://do-dam.tistory.com/158?category=747235
 
-    const updateData = {
-      ...userInfo,
-      ...body,
-    };
-
-    const updated = await this.userService.updateUser(updateData);
-    const returnUpdateUserInfo = await this.findUser(userInfo);
+    const updated: boolean = await this.userService.updateUser({
+      username,
+      gender,
+    });
+    const returnUpdateUserInfo: User = await this.findUser(username);
 
     return {
       success: updated,

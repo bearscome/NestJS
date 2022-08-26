@@ -34,7 +34,7 @@ export class UserService {
     return true;
   }
 
-  async updateUser(updateInfo: any): Promise<any> {
+  async updateUser(updateInfo: any): Promise<boolean> {
     await this.userRepository.save(updateInfo);
     return true;
   }

@@ -65,7 +65,7 @@ export class BoardController {
     @UploadedFile() file: any
   ) {
     const findUser = await this.authService.jwtFindUser(header);
-    const { id, username } = findUser; // 회원 아이디, 회원 primaryKey
+    const { username } = findUser; // 회원 아이디, 회원 primaryKey
     const { title, content } = boardDTO;
     // const { path, filename } = file && file;
 
