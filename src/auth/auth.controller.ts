@@ -19,7 +19,7 @@ import { Response, Request } from "express";
 import { AuthGuard } from "@nestjs/passport";
 // import { RolesGuard } from "./security/roles.guard";
 import { Roles } from "./decorator/role.decorator";
-import { RoleType } from "./role-type";
+import { RoleType } from "./decorator/role-type";
 import { JwtService } from "@nestjs/jwt";
 import { User } from "src/domain/user.entity";
 

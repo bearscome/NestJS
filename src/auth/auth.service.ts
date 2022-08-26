@@ -7,10 +7,10 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { UserDTO, UserInfo } from "./dto/user.dto";
-import { UserService } from "./user.service";
+import { UserService } from "./commonService/user.service";
 import * as bcrypt from "bcrypt";
 import { User } from "../domain/user.entity";
-import { Payload } from "./payload.interface";
+import { Payload } from "./interface/payload.interface";
 import { JwtService } from "@nestjs/jwt";
 import { Request } from "express";
 
