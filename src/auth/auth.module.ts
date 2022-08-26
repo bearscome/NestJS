@@ -8,8 +8,8 @@ import { JwtModule } from "@nestjs/jwt";
 import { PassportModule } from "@nestjs/passport";
 import { JwtStrategy } from "./security/passport.jwt.strategy";
 import { UserAuthorityRepository } from "./repository/user-autority.repository";
-import { BoardRepository } from "./board.repository";
-import { BoardCommentRepository } from "./board.comment.repository";
+import { BoardRepository } from "../board/repository/board.repository";
+import { BoardCommentRepository } from "../board/repository/board.comment.repository";
 import { BoardAnswerRepository } from "src/board/repository/board.answer.repository";
 
 @Module({

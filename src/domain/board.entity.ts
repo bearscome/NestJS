@@ -9,7 +9,7 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 import { BoardCommentEntity } from "./board.comment.entity";
-import { BoardAnswer } from "./board.answer.entity";
+import { BoardAnswer } from "./board/board.answer.entity";
 
 @Entity("board")
 export class Board {

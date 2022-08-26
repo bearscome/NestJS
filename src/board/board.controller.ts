@@ -24,12 +24,12 @@ import { Request, Response } from "express";
 import { diskStorage } from "multer";
 import { extname } from "path";
 import { AuthService } from "src/auth/auth.service";
-import { BoardCommentDTO } from "src/auth/dto/board.comment.dto";
+import { BoardCommentDTO } from "src/board/dto/board.comment.dto";
 import {
   BoardDTO,
   CreateBoardDTO,
   UpdateBoardDTO,
-} from "src/auth/dto/board.dto";
+} from "src/board/dto/board.dto";
 import { ResponseData } from "src/auth/dto/user.dto";
 import { Board } from "src/domain/board.entity";
 import { BoardService } from "./board.service";

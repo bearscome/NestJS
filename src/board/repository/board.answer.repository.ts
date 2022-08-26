@@ -1,4 +1,4 @@
-import { BoardAnswer } from "src/domain/board.answer.entity";
+import { BoardAnswer } from "src/domain/board/board.answer.entity";
 import { CustomRepository } from "src/typeorm-ex.decorator";
 import { Repository } from "typeorm";
 

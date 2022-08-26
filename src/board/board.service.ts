@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { BoardCommentRepository } from "src/auth/board.comment.repository";
-import { BoardRepository } from "src/auth/board.repository";
+import { BoardCommentRepository } from "src/board/repository/board.comment.repository";
+import { BoardRepository } from "src/board/repository/board.repository";
 import {
   BoardDTO,
   BoardHistroy,
@@ -9,7 +9,7 @@ import {
   CreateBoardDTO,
   GetHistoryBoardDTO,
   UpdateBoardDTO,
-} from "src/auth/dto/board.dto";
+} from "src/board/dto/board.dto";
 import { ResponseData } from "src/auth/dto/user.dto";
 import { Board } from "src/domain/board.entity";
 import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
