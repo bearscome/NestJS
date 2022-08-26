@@ -4,10 +4,13 @@ import { BoardCommentRepository } from "src/auth/board.comment.repository";
 import { BoardRepository } from "src/auth/board.repository";
 import {
   BoardDTO,
+  BoardHistroy,
+  BoardResponseStatus,
   CreateBoardDTO,
   GetHistoryBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
+import { ResponseData } from "src/auth/dto/user.dto";
 import { Board } from "src/domain/board.entity";
 import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
 import { BoardAnswerRepository } from "./repository/board.answer.repository";
@@ -27,7 +30,7 @@ export class BoardService {
    * @param borad_id 게시판 고유 아이디
    * @returns 게시판 상세
    */
-  async findBoard(borad_id: number) {
+  async findBoard(borad_id: number):Promise<Board> {
     // 게시글 고유 아이디 get,
     // 사용자가 작성했는지 확인해야하지만 -> jwt인증하니까, 굳이 할 필요가 없을 거 같다.
     const findBoard = await this.boardRepository.findOne({
@@ -50,12 +53,12 @@ export class BoardService {
     // 게시글 생성 서비스 로직
   }
 
-  async deleteBoard(board_id: number) {
+  async deleteBoard(board_id: number):Promise<BoardResponseStatus> {
     // return await this.boardRepository.delete()
     // 게시글 삭제 서비스 로직
     const boardInfo = await this.findBoard(board_id);
 
-    let result: { status: number; message: string } = {
+    let result: BoardResponseStatus = {
       status: 0,
       message: "",
     };
@@ -84,7 +87,7 @@ export class BoardService {
     }
   }
 
-  async updateBoard(updateBoardDTO: UpdateBoardDTO) {
+  async updateBoard(updateBoardDTO: UpdateBoardDTO): Promise<BoardResponseStatus> {
     // 게시글 수정 서비스 로직
     const { id, title, content } = updateBoardDTO;
     let result: { status: number; message: string } = {
@@ -125,11 +128,11 @@ export class BoardService {
     }
   }
 
-  async history({ offset, limit }: GetHistoryBoardDTO) {
+  async history({ offset, limit }: GetHistoryBoardDTO):Promise<BoardHistroy | BoardResponseStatus> {
     let result: {
       status: number;
       message: string;
-      result: Array<BoardDTO | []>;
+      result: Array<Board | []>;
       total: number;
     } = {
       status: 0,
@@ -139,23 +142,22 @@ export class BoardService {
     };
 
     try {
-      const boardData = await this.boardRepository.manager.query(
-        `SELECT * FROM board ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
-      );
-      const boardCount = await this.boardRepository.count();
+      const [boardList, total] = await Promise.all([
+        this.boardRepository.manager.query(
+          `SELECT * FROM board ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
+        ),
+        this.boardRepository.count(),
+      ])
 
-      if (boardData.length < 1) {
+      if (boardList.length < 1) {
         result.status = 4001;
         result.message = "게시물이 없습니다.";
       }
 
       result.status = 4000;
       result.message = "조회가 완료되었습니다.";
-      result.total = boardCount;
-      result.result = boardData;
-
-      // console.log("CUSTOM_ORDER_BY", test);
-      //`SELECT * FROM board ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby`
+      result.total = total;
+      result.result = boardList;
 
       // result = await this.boardRepository
       //   .findAndCount({
@@ -188,7 +190,7 @@ export class BoardService {
     return result;
   }
 
-  async addComment(insertData) {
+  async addComment(insertData:{username:string; board_id:number; content:string}):Promise<Board> {
     /**
      * 게시판 고유 번호
      * 댓글 글쓴이

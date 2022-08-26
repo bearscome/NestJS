@@ -30,6 +30,7 @@ import {
   CreateBoardDTO,
   UpdateBoardDTO,
 } from "src/auth/dto/board.dto";
+import { ResponseData } from "src/auth/dto/user.dto";
 import { Board } from "src/domain/board.entity";
 import { BoardService } from "./board.service";
 import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
@@ -59,11 +60,11 @@ export class BoardController {
     })
   )
   async createBoard(
-    @Headers() header: any,
+    @Headers() header: Headers,
     @Body() boardDTO: BoardDTO,
     @Res() res: Response,
-    @UploadedFile() file: any
-  ) {
+    @UploadedFile() file: Express.Multer.File
+  ): Promise<Response<ResponseData>> {
     const findUser = await this.authService.jwtFindUser(header);
     const { username } = findUser; // 회원 아이디, 회원 primaryKey
     const { title, content } = boardDTO;
@@ -77,7 +78,7 @@ export class BoardController {
     };
 
     try {
-      await this.boardService
+      return await this.boardService
         .createBoard(data)
         .then(() =>
           res.json({ message: "success", statusCode: HttpStatus.CREATED })
@@ -91,29 +92,32 @@ export class BoardController {
   }
 
   @Post("/delete")
-  async deleteBoard(@Body("id", ParseIntPipe) board_id: number): Promise<any> {
+  async deleteBoard(
+    @Body("id", ParseIntPipe) board_id: number,
+    @Res() res: Response
+  ): Promise<Response<ResponseData>> {
     // 게시글 삭제
     try {
       const reulst = await this.boardService.deleteBoard(board_id).then((r) => {
         if (r.status === 4000) {
           return {
-            ...r,
+            message: r.message,
             statusCode: HttpStatus.ACCEPTED,
           };
         } else if (r.status === 4001) {
           return {
-            ...r,
+            message: r.message,
             statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
           };
         } else {
           return {
-            ...r,
+            message: r.message,
             statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
           };
         }
       });
 
-      return reulst;
+      return res.json(reulst);
     } catch (err) {
       throw new HttpException(err, HttpStatus.INTERNAL_SERVER_ERROR);
     }

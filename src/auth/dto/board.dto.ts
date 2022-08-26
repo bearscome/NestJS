@@ -1,5 +1,6 @@
 import { Transform, Type } from "class-transformer";
 import { IsNumber, IsString, MaxLength } from "class-validator";
+import { Board } from "src/domain/board.entity";
 
 export class BoardDTO {
   @IsString()
@@ -31,4 +32,17 @@ export class GetHistoryBoardDTO {
   @IsNumber()
   @Type(() => Number)
   offset: number;
+}
+
+export class BoardResponseStatus {
+  @IsNumber()
+  status: number; 
+
+  @IsString()
+  message: string
+}
+
+export class BoardHistroy extends BoardResponseStatus{
+  total:number
+  list:Board
 }

@@ -83,75 +83,75 @@ export class AuthController {
   //   });
   // }
 
-  @Get("google")
-  @UseGuards(AuthGuard("google"))
-  async googleAuth(): Promise<void> {
-    // redirect url
-    console.log("google login");
-  }
+  // @Get("google")
+  // @UseGuards(AuthGuard("google"))
+  // async googleAuth(): Promise<void> {
+  //   // redirect url
+  //   console.log("google login");
+  // }
 
-  @Get("google/redirect")
-  @UseGuards(AuthGuard("google"))
-  async googleAuthCallback(
-    @Req() req: any,
-    @Res() res: Response
-  ): Promise<Response<UserJWT>> {
-    const jwtAcessToken = await this.authService.socialUserDoLoginOrSave(
-      req.user
-    );
+  // @Get("google/redirect")
+  // @UseGuards(AuthGuard("google"))
+  // async googleAuthCallback(
+  //   @Req() req: any,
+  //   @Res() res: Response
+  // ): Promise<Response<UserJWT>> {
+  //   const jwtAcessToken = await this.authService.socialUserDoLoginOrSave(
+  //     req.user
+  //   );
 
-    return res.json({
-      jwtAcessToken,
-      message: "success",
-      statusCode: HttpStatus.OK,
-    });
-  }
+  //   return res.json({
+  //     jwtAcessToken,
+  //     message: "success",
+  //     statusCode: HttpStatus.OK,
+  //   });
+  // }
 
-  @Get("naver")
-  @UseGuards(AuthGuard("naver"))
-  async naverAuth(): Promise<void> {
-    return;
-  }
+  // @Get("naver")
+  // @UseGuards(AuthGuard("naver"))
+  // async naverAuth(): Promise<void> {
+  //   return;
+  // }
 
-  @Get("naver/redirect")
-  @UseGuards(AuthGuard("naver"))
-  async naverAuthCallback(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response<UserJWT>> {
-    const jwtAcessToken = await this.authService.socialUserDoLoginOrSave(
-      req.user
-    );
+  // @Get("naver/redirect")
+  // @UseGuards(AuthGuard("naver"))
+  // async naverAuthCallback(
+  //   @Req() req: Request,
+  //   @Res() res: Response
+  // ): Promise<Response<UserJWT>> {
+  //   const jwtAcessToken = await this.authService.socialUserDoLoginOrSave(
+  //     req.user
+  //   );
 
-    return res.json({
-      jwtAcessToken,
-      message: "success",
-      statusCode: HttpStatus.OK,
-    });
-  }
+  //   return res.json({
+  //     jwtAcessToken,
+  //     message: "success",
+  //     statusCode: HttpStatus.OK,
+  //   });
+  // }
 
-  @Get("kakao")
-  @UseGuards(AuthGuard("kakao"))
-  async kakaoAuth(): Promise<void> {
-    return;
-  }
+  // @Get("kakao")
+  // @UseGuards(AuthGuard("kakao"))
+  // async kakaoAuth(): Promise<void> {
+  //   return;
+  // }
 
-  @Get("kakao/redirect")
-  @UseGuards(AuthGuard("kakao"))
-  async kakaoAuthCallback(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response<UserJWT>> {
-    const jwtAcessToken = await this.authService.socialUserDoLoginOrSave(
-      req.user
-    );
+  // @Get("kakao/redirect")
+  // @UseGuards(AuthGuard("kakao"))
+  // async kakaoAuthCallback(
+  //   @Req() req: Request,
+  //   @Res() res: Response
+  // ): Promise<Response<UserJWT>> {
+  //   const jwtAcessToken = await this.authService.socialUserDoLoginOrSave(
+  //     req.user
+  //   );
 
-    return res.json({
-      jwtAcessToken,
-      message: "success",
-      statusCode: HttpStatus,
-    });
-  }
+  //   return res.json({
+  //     jwtAcessToken,
+  //     message: "success",
+  //     statusCode: HttpStatus,
+  //   });
+  // }
 
   @Get("/getUserInfo")
   @UseGuards(AuthGuard("jwt"))
