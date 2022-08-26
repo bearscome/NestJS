@@ -8,7 +8,7 @@ import {
   PrimaryGeneratedColumn,
   JoinColumn,
 } from "typeorm";
-import { Board } from "../board.entity";
+import { Board } from "./board.entity";
 
 @Entity("answer")
 export class BoardAnswer {
