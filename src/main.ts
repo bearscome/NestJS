@@ -10,7 +10,7 @@ async function bootstrap() {
   // app.use(cookieParser());
   // 쿠키파서
 
-  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(new ValidationPipe({ transform: true }));
   // 모든 컨트롤러 벨리데이션 체크
 
   app.use("/public", express.static(join(__dirname, "..", "public")));

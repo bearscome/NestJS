@@ -3,6 +3,7 @@ import { ExtractJwt, Strategy, VerifiedCallback } from "passport-jwt";
 import { PassportStrategy } from "@nestjs/passport";
 import { AuthService } from "../auth.service";
 import { Payload } from "../interface/payload.interface";
+import { LoginDTO } from "../dto/user.dto";
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
@@ -14,15 +15,16 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
   }
 
-  async validate(payload: Payload, done: VerifiedCallback): Promise<any> {
-    const user = await this.authService.tokenValidateUser(payload);
-    if (!user) {
-      return done(
-        new UnauthorizedException({ message: "user does not exit" }),
-        false
-      );
-    }
+  async validate(loginDTO: LoginDTO, done: VerifiedCallback): Promise<any> {
+    // console.log("여기로 들어와?");
+    // const user = await this.authService.test(loginDTO);
+    // if (!user) {
+    //   return done(
+    //     new UnauthorizedException({ message: "JWT에서 팅겼어요..." }),
+    //     false
+    //   );
+    // }
 
-    return done(null, user);
+    return done(null, "");
   }
 }

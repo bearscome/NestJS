@@ -69,25 +69,49 @@ export class AuthService {
     };
   }
 
-  async tokenValidateUser(payload: Payload): Promise<UserDTO | undefined> {
-    const userFind = await this.userService.findByFeilds({
-      where: { username: payload.username },
+  async test(loginDTO: LoginDTO) {
+    let findUser: User = await this.userService.findByFeilds({
+      where: { username: loginDTO.username },
     });
-    this.flatAuthorities(userFind);
-    return userFind;
-  }
 
-  private flatAuthorities(user: any): User {
-    if (user && user.authorities) {
-      const authorities: string[] = [];
-      user.authorities.forEach((authority) => {
-        authorities.push(authority);
-      });
-      user.authorities = authorities;
+    if (!findUser) {
+      throw new HttpException("회원 정보가 없습니다.", HttpStatus.BAD_REQUEST);
     }
 
-    return user;
+    const validatePassword = await bcrypt.compare(
+      loginDTO.password,
+      findUser.password
+    );
+
+    if (!findUser.social_type && !validatePassword) {
+      throw new HttpException(
+        "비밀번호가 일치하지 않습니다.",
+        HttpStatus.BAD_REQUEST
+      );
+    }
+
+    return findUser;
   }
+
+  // async tokenValidateUser(loginDTO: LoginDTO): Promise<UserDTO | undefined> {
+  //   const userFind = await this.userService.findByFeilds({
+  //     where: { username: loginDTO.username },
+  //   });
+  //   this.flatAuthorities(userFind);
+  //   return userFind;
+  // }
+
+  // private flatAuthorities(user: any): User {
+  //   if (user && user.authorities) {
+  //     const authorities: string[] = [];
+  //     user.authorities.forEach((authority) => {
+  //       authorities.push(authority);
+  //     });
+  //     user.authorities = authorities;
+  //   }
+
+  //   return user;
+  // }
 
   private convertInAuthorities(user: any): User {
     if (user && user.authorities) {

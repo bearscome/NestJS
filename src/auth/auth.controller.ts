@@ -6,11 +6,7 @@ import {
   Res,
   Get,
   UseGuards,
-  UsePipes,
-  ValidationPipe,
   Headers,
-  Param,
-  Redirect,
   HttpStatus,
 } from "@nestjs/common";
 import { AuthService } from "./auth.service";
@@ -33,7 +29,6 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post("/register")
-  @UsePipes(ValidationPipe)
   async registerAccount(
     @Req() req: Request,
     @Body() userDTO: UserDTO
@@ -164,7 +159,6 @@ export class AuthController {
   }
 
   @Post("delete")
-  @UsePipes(ValidationPipe)
   // @UseGuards(AuthGuard("jwt"))
   @UseGuards(CustomAuthGuard)
   async deleteUser(
@@ -185,7 +179,6 @@ export class AuthController {
   }
 
   @Post("update")
-  @UsePipes(ValidationPipe)
   // @UseGuards(AuthGuard("jwt"))
   @UseGuards(CustomAuthGuard)
   async updateUser(
