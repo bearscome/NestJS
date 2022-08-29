@@ -14,7 +14,7 @@ import {
   HttpStatus,
 } from "@nestjs/common";
 import { AuthService } from "./auth.service";
-import { ResponseData, UserDTO, UserJWT } from "./dto/user.dto";
+import { LoginDTO, ResponseData, UserDTO, UserJWT } from "./dto/user.dto";
 import { Response, Request } from "express";
 import { AuthGuard } from "@nestjs/passport";
 // import { RolesGuard } from "./security/roles.guard";
@@ -43,10 +43,10 @@ export class AuthController {
 
   @Post("/login")
   async login(
-    @Body() userDTO: UserDTO,
+    @Body() loginDTO: LoginDTO,
     @Res() res: Response
   ): Promise<Response<UserJWT>> {
-    const jwt = await this.authService.validateUser(userDTO);
+    const jwt = await this.authService.validateUser(loginDTO);
     return res.json({
       ...jwt,
       message: "success",

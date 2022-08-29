@@ -1,17 +1,11 @@
 import { Type } from "class-transformer";
 import { IsNumber, IsString, MaxLength } from "class-validator";
+import { BoardDTO } from "./board.dto";
 
-export class BoardAnswerDTO {
+export class BoardAnswerDTO extends BoardDTO {
   @IsNumber()
   @Type(() => Number)
   board_id: number;
-
-  @IsString()
-  title: string;
-
-  @IsString()
-  @MaxLength(1000)
-  content: string;
 
   @IsNumber()
   @Type(() => Number)

@@ -6,7 +6,7 @@ import {
   Redirect,
   UnauthorizedException,
 } from "@nestjs/common";
-import { UserDTO, UserInfo } from "./dto/user.dto";
+import { LoginDTO, UserDTO, UserInfo } from "./dto/user.dto";
 import { UserService } from "./commonService/user.service";
 import * as bcrypt from "bcrypt";
 import { User } from "../domain/user.entity";
@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   async validateUser(
-    user: UserDTO
+    user: LoginDTO
   ): Promise<{ accessToken: string; user: User } | undefined> {
     let findUser: User = await this.userService.findByFeilds({
       where: { username: user.username },

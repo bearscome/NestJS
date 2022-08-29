@@ -4,7 +4,7 @@ import { User } from "src/domain/user.entity";
 import { NotIn } from "src/testing";
 import { Column } from "typeorm";
 
-export class UserDTO {
+export class LoginDTO {
   @IsNotEmpty()
   @IsString()
   // @NotIn("password", { message: "asdasd" })
@@ -13,7 +13,9 @@ export class UserDTO {
   @IsNotEmpty()
   @IsString()
   password: string;
+}
 
+export class UserDTO extends LoginDTO {
   @Column()
   social_type?: string;
 
