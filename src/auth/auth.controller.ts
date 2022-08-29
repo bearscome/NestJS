@@ -22,6 +22,7 @@ import { Roles } from "./decorator/role.decorator";
 import { RoleType } from "./decorator/role-type";
 import { JwtService } from "@nestjs/jwt";
 import { User } from "src/domain/user.entity";
+import { CustomAuthGuard } from "./security/auth.guard";
 
 /**
  * 인증 컨트롤러
@@ -154,7 +155,8 @@ export class AuthController {
   // }
 
   @Get("/getUserInfo")
-  @UseGuards(AuthGuard("jwt"))
+  // @UseGuards(AuthGuard("jwt"))
+  @UseGuards(CustomAuthGuard)
   async getUserInfo(@Headers() headers: Headers): Promise<User | undefined> {
     const findUser = await this.authService.jwtFindUser(headers);
 
@@ -163,7 +165,8 @@ export class AuthController {
 
   @Post("delete")
   @UsePipes(ValidationPipe)
-  @UseGuards(AuthGuard("jwt"))
+  // @UseGuards(AuthGuard("jwt"))
+  @UseGuards(CustomAuthGuard)
   async deleteUser(
     @Headers() headers: Headers,
     @Res() res: Response
@@ -183,7 +186,8 @@ export class AuthController {
 
   @Post("update")
   @UsePipes(ValidationPipe)
-  @UseGuards(AuthGuard("jwt"))
+  // @UseGuards(AuthGuard("jwt"))
+  @UseGuards(CustomAuthGuard)
   async updateUser(
     @Headers() headers: Headers,
     @Body() body: { gender: string },

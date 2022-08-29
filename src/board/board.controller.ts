@@ -34,6 +34,7 @@ import { ResponseData } from "src/auth/dto/user.dto";
 import { Board } from "src/domain/board.entity";
 import { BoardService } from "./board.service";
 import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
+import { CustomAuthGuard } from "src/auth/security/auth.guard";
 
 @Controller("board")
 @UsePipes(new ValidationPipe())
@@ -44,7 +45,8 @@ export class BoardController {
   ) {}
 
   @Post("/create")
-  @UseGuards(AuthGuard("jwt"))
+  // @UseGuards(AuthGuard("jwt"))
+  @UseGuards(CustomAuthGuard)
   @UseInterceptors(
     FileInterceptor("file", {
       // dest: "public",
@@ -173,7 +175,8 @@ export class BoardController {
   }
 
   @Post("history/comment")
-  @UseGuards(AuthGuard("jwt"))
+  // @UseGuards(AuthGuard("jwt"))
+  @UseGuards(CustomAuthGuard)
   @UsePipes(new ValidationPipe({ transform: true }))
   async addComment(
     @Headers() header: any,
@@ -193,7 +196,8 @@ export class BoardController {
   }
 
   @Post("answer/create")
-  @UseGuards(AuthGuard("jwt"))
+  // @UseGuards(AuthGuard("jwt"))
+  @UseGuards(CustomAuthGuard)
   @UseInterceptors(
     FileInterceptor("file", {
       storage: diskStorage({
