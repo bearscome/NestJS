@@ -69,30 +69,6 @@ export class AuthService {
     };
   }
 
-  async test(loginDTO: LoginDTO) {
-    let findUser: User = await this.userService.findByFeilds({
-      where: { username: loginDTO.username },
-    });
-
-    if (!findUser) {
-      throw new HttpException("회원 정보가 없습니다.", HttpStatus.BAD_REQUEST);
-    }
-
-    const validatePassword = await bcrypt.compare(
-      loginDTO.password,
-      findUser.password
-    );
-
-    if (!findUser.social_type && !validatePassword) {
-      throw new HttpException(
-        "비밀번호가 일치하지 않습니다.",
-        HttpStatus.BAD_REQUEST
-      );
-    }
-
-    return findUser;
-  }
-
   // async tokenValidateUser(loginDTO: LoginDTO): Promise<UserDTO | undefined> {
   //   const userFind = await this.userService.findByFeilds({
   //     where: { username: loginDTO.username },
