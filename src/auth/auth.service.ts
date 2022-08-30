@@ -177,4 +177,17 @@ export class AuthService {
       user: returnUpdateUserInfo,
     };
   }
+
+  async setAdmin(userInfo: User): Promise<boolean> {
+    if (userInfo.authorities === "ADMIN") {
+      throw new HttpException("이미 어드민 입니다.", 500);
+    }
+
+    const data = {
+      ...userInfo,
+      authorities: "ADMIN",
+    };
+
+    return await this.userService.updateUser(data);
+  }
 }

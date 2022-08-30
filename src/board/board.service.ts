@@ -30,7 +30,7 @@ export class BoardService {
    * @param borad_id 게시판 고유 아이디
    * @returns 게시판 상세
    */
-  async findBoard(borad_id: number):Promise<Board> {
+  async findBoard(borad_id: number): Promise<Board> {
     // 게시글 고유 아이디 get,
     // 사용자가 작성했는지 확인해야하지만 -> jwt인증하니까, 굳이 할 필요가 없을 거 같다.
     const findBoard = await this.boardRepository.findOne({
@@ -53,7 +53,7 @@ export class BoardService {
     // 게시글 생성 서비스 로직
   }
 
-  async deleteBoard(board_id: number):Promise<BoardResponseStatus> {
+  async deleteBoard(board_id: number): Promise<BoardResponseStatus> {
     // return await this.boardRepository.delete()
     // 게시글 삭제 서비스 로직
     const boardInfo = await this.findBoard(board_id);
@@ -87,7 +87,73 @@ export class BoardService {
     }
   }
 
-  async updateBoard(updateBoardDTO: UpdateBoardDTO): Promise<BoardResponseStatus> {
+  async deleteBoardAll(): Promise<boolean> {
+    const boardList = await this.boardRepository.find({
+      select: {
+        borad_id: true,
+      },
+    });
+
+    const deleteList = async () => {
+      let result = false;
+      let listCount = boardList.length;
+
+      const tt = await boardList.reduce(async (prev, cur) => {
+        await this.boardRepository
+          .delete({ borad_id: cur.borad_id })
+          .then((res) => {
+            listCount--;
+            console.log("listCount, ", listCount);
+            console.log("res, ", res);
+            if (listCount === 0) {
+              result = true;
+            }
+          });
+
+        return {
+          cur,
+        };
+      }, {});
+
+      if (listCount === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    // boardList.forEach(async ({ borad_id }) => {
+    //   await this.boardRepository.delete({ borad_id }).then(() => {
+    //     listCount--;
+    //     console.log(listCount);
+    //     if (listCount === 0) {
+    //       console.log("다 끝났다.");
+    //       result = true;
+    //     } else {
+    //       console.log("아직 남았다.");
+    //     }
+    //   });
+    // });
+
+    // const tt = await boardList.reduce(async (prev, current) => {
+    //   console.log("prev", await prev, current);
+    //   const result = await this.boardRepository.delete({
+    //     borad_id: current.borad_id,
+    //   });
+    //   return {
+    //     ...(await prev),
+    //     ...result,
+    //   };
+    // }, {});
+
+    // console.log("boardList ", tt);
+
+    return await deleteList();
+  }
+
+  async updateBoard(
+    updateBoardDTO: UpdateBoardDTO
+  ): Promise<BoardResponseStatus> {
     // 게시글 수정 서비스 로직
     const { id, title, content } = updateBoardDTO;
     let result: { status: number; message: string } = {
@@ -128,7 +194,10 @@ export class BoardService {
     }
   }
 
-  async history({ offset, limit }: GetHistoryBoardDTO):Promise<BoardHistroy | BoardResponseStatus> {
+  async history({
+    offset,
+    limit,
+  }: GetHistoryBoardDTO): Promise<BoardHistroy | BoardResponseStatus> {
     let result: {
       status: number;
       message: string;
@@ -147,7 +216,7 @@ export class BoardService {
           `SELECT * FROM board ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
         ),
         this.boardRepository.count(),
-      ])
+      ]);
 
       if (boardList.length < 1) {
         result.status = 4001;
@@ -190,7 +259,11 @@ export class BoardService {
     return result;
   }
 
-  async addComment(insertData:{username:string; board_id:number; content:string}):Promise<Board> {
+  async addComment(insertData: {
+    username: string;
+    board_id: number;
+    content: string;
+  }): Promise<Board> {
     /**
      * 게시판 고유 번호
      * 댓글 글쓴이

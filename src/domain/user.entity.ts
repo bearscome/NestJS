@@ -1,4 +1,5 @@
 import { IsNotEmpty } from "class-validator";
+import { RoleType } from "src/auth/decorator/role-type";
 import {
   Column,
   Entity,
@@ -7,12 +8,10 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from "typeorm";
-import { UserAuthority } from "./user-authority.entity";
 
 @Entity("user")
 export class User {
   @PrimaryGeneratedColumn()
-  @IsNotEmpty()
   id: number;
 
   @Column()
@@ -23,10 +22,10 @@ export class User {
   @IsNotEmpty()
   password: string;
 
-  // @OneToMany(() => UserAuthority, (userAuthority) => userAuthority.user, {
-  //   eager: true,
-  // })
-  // authorities?: any[];
+  // @OneToMany(() => UserAuthority, (userAuthority) => userAuthority.user)
+  // authorities: any[];
+  @Column({ default: "USER" })
+  authorities: string;
 
   @Column()
   social_type: string;

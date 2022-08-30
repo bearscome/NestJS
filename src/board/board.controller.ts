@@ -7,18 +7,13 @@ import {
   ParseIntPipe,
   Post,
   Res,
-  UsePipes,
-  ValidationPipe,
   Get,
-  Req,
-  Param,
   Query,
   DefaultValuePipe,
   UseGuards,
   UseInterceptors,
   UploadedFile,
 } from "@nestjs/common";
-import { AuthGuard } from "@nestjs/passport";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { Request, Response } from "express";
 import { diskStorage } from "multer";
@@ -31,13 +26,14 @@ import {
   UpdateBoardDTO,
 } from "src/board/dto/board.dto";
 import { ResponseData } from "src/auth/dto/user.dto";
-import { Board } from "src/domain/board.entity";
 import { BoardService } from "./board.service";
 import { BoardAnswerAddDTD, BoardAnswerDTO } from "./dto/board.answer.dto";
 import { CustomAuthGuard } from "src/auth/security/auth.guard";
+import { Roles } from "src/auth/decorator/role.decorator";
+import { AuthGuard } from "@nestjs/passport";
+import { RolesGuard } from "src/auth/security/roles.guard";
 
 @Controller("board")
-@UsePipes(new ValidationPipe())
 export class BoardController {
   constructor(
     private boardService: BoardService,
@@ -45,8 +41,8 @@ export class BoardController {
   ) {}
 
   @Post("/create")
-  // @UseGuards(AuthGuard("jwt"))
-  @UseGuards(CustomAuthGuard)
+  @UseGuards(AuthGuard("jwt"))
+  // @UseGuards(CustomAuthGuard)
   @UseInterceptors(
     FileInterceptor("file", {
       // dest: "public",
@@ -125,6 +121,12 @@ export class BoardController {
     }
   }
 
+  @Post("/delite/admin/all")
+  async boardDeliteAll(@Body() content: string) {
+    // 어드민일 경우
+    console.log("전체 삭제");
+  }
+
   @Post("/update")
   async updateBoard(@Body() updateBoardDTO: UpdateBoardDTO) {
     // 게시글 업데이트
@@ -157,7 +159,6 @@ export class BoardController {
   }
 
   @Get("history")
-  @UsePipes(new ValidationPipe({ transform: true }))
   // query로 넘어올 시 스트링으로 들어오나, Validation안에 있는 transform을 true로 변경한 뒤,
   // DTO에서 @Type(() => Number)로 수정하면 넘버형으로 변견된다
   // async findAll(@Query() getHistory:GetHistoryBoardDTO) {
@@ -176,8 +177,7 @@ export class BoardController {
 
   @Post("history/comment")
   // @UseGuards(AuthGuard("jwt"))
-  @UseGuards(CustomAuthGuard)
-  @UsePipes(new ValidationPipe({ transform: true }))
+  // @UseGuards(CustomAuthGuard)
   async addComment(
     @Headers() header: any,
     @Body() boardCommentDTO: BoardCommentDTO
@@ -237,5 +237,24 @@ export class BoardController {
           statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
         });
       });
+  }
+
+  @Post("deleteAll")
+  @UseGuards(CustomAuthGuard, RolesGuard)
+  @Roles("ADMIN")
+  async deleteAll(@Res() res: Response) {
+    const result = await this.boardService.deleteBoardAll();
+
+    if (result) {
+      res.json({
+        message: "success",
+        statusCode: HttpStatus.CREATED,
+      });
+    } else {
+      res.json({
+        message: "fail",
+        statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
+      });
+    }
   }
 }

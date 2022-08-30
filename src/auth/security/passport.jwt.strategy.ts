@@ -9,22 +9,21 @@ import { LoginDTO } from "../dto/user.dto";
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private authService: AuthService) {
     super({
-      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(), // 'bearer 체계를 사용하여 인증 헤더에서 JWT를 찾는 새 추출기 생성
+      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      // 'bearer 체계를 사용하여 인증 헤더에서 JWT를 찾는 새 추출기 생성 후 validate에 값 넘김
       ignoreExpiration: true,
       secretOrKey: "process.env.JWT_ACCESS_TOKEN_SECRET",
     });
   }
 
   async validate(loginDTO: LoginDTO, done: VerifiedCallback): Promise<any> {
-    // console.log("여기로 들어와?");
-    // const user = await this.authService.test(loginDTO);
-    // if (!user) {
-    //   return done(
-    //     new UnauthorizedException({ message: "JWT에서 팅겼어요..." }),
-    //     false
-    //   );
-    // }
+    const { username } = loginDTO;
+    const user = await this.authService.findUser(username);
 
-    return done(null, "");
+    if (!user) {
+      new UnauthorizedException({ message: "JWT에서 팅겼어요..." });
+    }
+
+    return user;
   }
 }

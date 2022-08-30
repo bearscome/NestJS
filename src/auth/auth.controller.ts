@@ -150,7 +150,6 @@ export class AuthController {
   // }
 
   @Get("/getUserInfo")
-  // @UseGuards(AuthGuard("jwt"))
   @UseGuards(CustomAuthGuard)
   async getUserInfo(@Headers() headers: Headers): Promise<User | undefined> {
     const findUser = await this.authService.jwtFindUser(headers);
@@ -159,7 +158,6 @@ export class AuthController {
   }
 
   @Post("delete")
-  // @UseGuards(AuthGuard("jwt"))
   @UseGuards(CustomAuthGuard)
   async deleteUser(
     @Headers() headers: Headers,
@@ -179,7 +177,6 @@ export class AuthController {
   }
 
   @Post("update")
-  // @UseGuards(AuthGuard("jwt"))
   @UseGuards(CustomAuthGuard)
   async updateUser(
     @Headers() headers: Headers,
@@ -196,6 +193,20 @@ export class AuthController {
     }
   }
 
+  @Post("setadmin")
+  // @UseGuards(AuthGuard("jwt"))
+  @Roles("USER")
+  async setAdmin(@Headers() headers: Headers): Promise<any> {
+    const findUser = await this.authService.jwtFindUser(headers);
+    const result = await this.authService.setAdmin(findUser);
+
+    if (result) {
+      return {
+        message: "success",
+        statusCode: HttpStatus.OK,
+      };
+    }
+  }
   // 삭제 추가 ->
   // 업데이트 추가 -> 회원정보 추가,
   // filehandle ->

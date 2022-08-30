@@ -1,7 +1,37 @@
 import { CanActivate, ExecutionContext, Injectable } from "@nestjs/common";
 import { Reflector } from "@nestjs/core";
-import { Observable } from "rxjs";
-import { User } from "../../domain/user.entity";
+import { JwtService } from "@nestjs/jwt";
+import { AuthService } from "../auth.service";
+import { RoleType } from "../decorator/role-type";
+
+@Injectable()
+export class RolesGuard implements CanActivate {
+  constructor(
+    private reflector: Reflector,
+    // private jwtService: JwtService,
+    private authService: AuthService
+  ) {}
+
+  async canActivate(context: ExecutionContext): Promise<boolean> {
+    const requiredRoles = this.reflector.getAllAndOverride<RoleType[]>(
+      "roles",
+      [context.getHandler()]
+    );
+    //reflector -> roleType에 정의된 setMetaData를 가져온다.
+
+    console.log("requiredRoles", requiredRoles);
+    const request = context.switchToHttp().getRequest();
+    const user = request.user;
+
+    console.log("users", user);
+
+    if (!user) {
+      return false;
+    }
+
+    return requiredRoles.includes(user.authorities);
+  }
+}
 
 // @Injectable()
 // export class RolesGuard implements CanActivate {
