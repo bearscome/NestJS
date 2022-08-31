@@ -99,6 +99,7 @@ export class BoardService {
       let listCount = boardList.length;
 
       const tt = await boardList.reduce(async (prev, cur) => {
+        await prev;
         await this.boardRepository
           .delete({ borad_id: cur.borad_id })
           .then((res) => {

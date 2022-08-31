@@ -13,6 +13,8 @@ import {
   UseGuards,
   UseInterceptors,
   UploadedFile,
+  BadRequestException,
+  Inject,
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { Request, Response } from "express";
@@ -32,17 +34,29 @@ import { CustomAuthGuard } from "src/auth/security/auth.guard";
 import { Roles } from "src/auth/decorator/role.decorator";
 import { AuthGuard } from "@nestjs/passport";
 import { RolesGuard } from "src/auth/security/roles.guard";
+import { Logger as WinstonLogger } from "winston";
+import { WINSTON_MODULE_PROVIDER } from "nest-winston";
 
 @Controller("board")
 export class BoardController {
   constructor(
     private boardService: BoardService,
-    private authService: AuthService
+    private authService: AuthService,
+    @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: WinstonLogger
   ) {}
 
+  private printWinston(...args) {
+    this.logger.error("error: ", args);
+    this.logger.warn("warn: ", args);
+    this.logger.info("info: ", args);
+    this.logger.http("http: ", args);
+    this.logger.verbose("verbose: ", args);
+    this.logger.debug("debug: ", args);
+    this.logger.silly("silly: ", args);
+  }
+
   @Post("/create")
-  @UseGuards(AuthGuard("jwt"))
-  // @UseGuards(CustomAuthGuard)
+  @UseGuards(CustomAuthGuard)
   @UseInterceptors(
     FileInterceptor("file", {
       // dest: "public",
@@ -75,6 +89,8 @@ export class BoardController {
       image_path: file ? file?.path : null,
     };
 
+    this.printWinston(data);
+
     try {
       return await this.boardService
         .createBoard(data)
@@ -90,6 +106,7 @@ export class BoardController {
   }
 
   @Post("/delete")
+  @UseGuards(CustomAuthGuard)
   async deleteBoard(
     @Body("id", ParseIntPipe) board_id: number,
     @Res() res: Response
@@ -121,13 +138,8 @@ export class BoardController {
     }
   }
 
-  @Post("/delite/admin/all")
-  async boardDeliteAll(@Body() content: string) {
-    // 어드민일 경우
-    console.log("전체 삭제");
-  }
-
   @Post("/update")
+  @UseGuards(CustomAuthGuard)
   async updateBoard(@Body() updateBoardDTO: UpdateBoardDTO) {
     // 게시글 업데이트
     try {
@@ -176,8 +188,7 @@ export class BoardController {
   }
 
   @Post("history/comment")
-  // @UseGuards(AuthGuard("jwt"))
-  // @UseGuards(CustomAuthGuard)
+  @UseGuards(CustomAuthGuard)
   async addComment(
     @Headers() header: any,
     @Body() boardCommentDTO: BoardCommentDTO
@@ -196,7 +207,6 @@ export class BoardController {
   }
 
   @Post("answer/create")
-  // @UseGuards(AuthGuard("jwt"))
   @UseGuards(CustomAuthGuard)
   @UseInterceptors(
     FileInterceptor("file", {
