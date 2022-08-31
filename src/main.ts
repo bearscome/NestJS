@@ -4,6 +4,7 @@ import { AppModule } from "./app.module";
 import express from "express";
 import { join } from "path";
 import { ValidationPipe } from "@nestjs/common";
+import { WINSTON_MODULE_NEST_PROVIDER } from "nest-winston";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
@@ -15,6 +16,9 @@ async function bootstrap() {
 
   app.use("/public", express.static(join(__dirname, "..", "public")));
   // client에 imgPath를 넘겨주면, 해당 img Path로 접근 가능
+
+  app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
+  // logger 전역 사용
 
   await app.listen(3000);
 }
