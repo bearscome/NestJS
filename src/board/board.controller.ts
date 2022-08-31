@@ -41,8 +41,9 @@ import { WINSTON_MODULE_PROVIDER } from "nest-winston";
 export class BoardController {
   constructor(
     private boardService: BoardService,
-    private authService: AuthService // @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: WinstonLogger
-  ) {}
+    private authService: AuthService
+  ) // @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: WinstonLogger
+  {}
 
   @Post("/create")
   @UseGuards(CustomAuthGuard)

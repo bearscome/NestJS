@@ -10,6 +10,7 @@ import { NaverStrategy } from "./auth/strategy/naverStrategy";
 import { KakaoStategy } from "./auth/strategy/kakaoStrategy";
 import { BoardModule } from "./board/board.module";
 import { LoggerMiddleware } from "./middleware/logger.middleware";
+import { JwtService } from "@nestjs/jwt";
 
 @Module({
   imports: [
@@ -19,7 +20,14 @@ import { LoggerMiddleware } from "./middleware/logger.middleware";
     BoardModule,
   ],
   controllers: [AppController],
-  providers: [AppService, GoogleStrategy, NaverStrategy, KakaoStategy, Logger],
+  providers: [
+    AppService,
+    GoogleStrategy,
+    NaverStrategy,
+    KakaoStategy,
+    Logger,
+    JwtService,
+  ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
