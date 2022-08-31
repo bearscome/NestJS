@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common";
+import { Logger, MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
@@ -9,11 +9,7 @@ import { GoogleStrategy } from "./auth/strategy/googleStrategy";
 import { NaverStrategy } from "./auth/strategy/naverStrategy";
 import { KakaoStategy } from "./auth/strategy/kakaoStrategy";
 import { BoardModule } from "./board/board.module";
-import * as winston from "winston";
-import {
-  utilities as nestWinstonModuleUtilities,
-  WinstonModule,
-} from "nest-winston";
+import { LoggerMiddleware } from "./middleware/logger.middleware";
 
 @Module({
   imports: [
@@ -21,23 +17,14 @@ import {
     TypeOrmModule.forRootAsync({ useFactory: ormConfig }),
     AuthModule,
     BoardModule,
-    WinstonModule.forRoot({
-      transports: [
-        new winston.transports.Console({
-          // level: process.env.NODE_ENV === "production" ? "info" : "silly", // 로그레벨 지정
-          level: "silly",
-          format: winston.format.combine(
-            winston.format.timestamp(), // 로그 남긴 시각
-            nestWinstonModuleUtilities.format.nestLike("MyApp", {
-              // 어디에서 로그를남겼는지 네이밍 설정
-              prettyPrint: true,
-            })
-          ),
-        }),
-      ],
-    }),
   ],
   controllers: [AppController],
-  providers: [AppService, GoogleStrategy, NaverStrategy, KakaoStategy],
+  providers: [AppService, GoogleStrategy, NaverStrategy, KakaoStategy, Logger],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LoggerMiddleware).forRoutes("*");
+    // 인터셉터 방식은 라우트 핸들러를 지나야해서 잘못된 요청(404 등)은 로그가 찍히지 않았다.
+    // (*) = 모든 요청에 대한 기록은 미들웨어서 작성
+  }
+}

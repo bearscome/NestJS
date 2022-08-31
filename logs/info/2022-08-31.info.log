@@ -1,0 +1,334 @@
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"WinstonModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"POST /board/create 401 ::1 PostmanRuntime/7.29.2"}
+{"level":"info","message":"POST /board/deleteAll 201 ::1 PostmanRuntime/7.29.2"}
+{"level":"info","message":"POST /board/deleteAll 401 ::1 PostmanRuntime/7.29.2"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"POST /board/deleteAll 401 ::1 PostmanRuntime/7.29.2"}
+{"level":"info","message":"POST /auth/login 201 ::1 PostmanRuntime/7.29.2"}
+{"level":"info","message":"POST /board/create 201 ::1 PostmanRuntime/7.29.2"}
+{"level":"info","message":"POST /board/create 201 ::1 PostmanRuntime/7.29.2"}
+{"level":"info","message":"POST /board/create 201 ::1 PostmanRuntime/7.29.2"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}

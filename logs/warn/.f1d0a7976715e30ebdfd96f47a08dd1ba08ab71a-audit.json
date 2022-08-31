@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/leehyosung/nest-auth/logs/warn/.f1d0a7976715e30ebdfd96f47a08dd1ba08ab71a-audit.json",
+    "files": [
+        {
+            "date": 1661911628770,
+            "name": "/Users/leehyosung/nest-auth/logs/warn/2022-08-31.warn.log",
+            "hash": "c8e4a261f1e597df6b2b8aa685871a22c4d43759d1c7e5421b01835568034c1f"
+        }
+    ],
+    "hashType": "sha256"
+}
