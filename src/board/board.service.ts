@@ -278,16 +278,13 @@ export class BoardService {
       total: 0,
     };
 
-    const [boardList, total] = await Promise.all([
-      this.boardRepository.manager.query(
-        `SELECT * FROM board WHERE ${searchType} like '%${searchContent}%' ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
-      ),
-      this.boardRepository.count(),
-    ]);
+    const boardList = await this.boardRepository.manager.query(
+      `SELECT * FROM board WHERE ${searchType} like '%${searchContent}%' ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
+    );
 
     result.status = 4000;
     result.message = "조회가 완료되었습니다.";
-    result.total = total;
+    result.total = boardList.length;
     result.result = boardList;
 
     return result;
