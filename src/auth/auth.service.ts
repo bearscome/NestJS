@@ -21,6 +21,12 @@ export class AuthService {
     private jwtService: JwtService
   ) {}
 
+  /**
+   * Request값을 DB에 저장한다.
+   * DB에 해당 정보가 있을 경우, 회원정보가 있다는 것을 알린다.
+   * @param newUser
+   * @returns 회원 정보를 저장한 후 회원 정보 값을 리턴한다.
+   */
   async regiseterNewUser(newUser: UserDTO): Promise<UserDTO> {
     let findUser: User = await this.userService.findByFeilds({
       where: { username: newUser.username },
@@ -32,6 +38,12 @@ export class AuthService {
     return this.userService.save(newUser);
   }
 
+  /**
+   * DB에 회원정보가 있을 경우 JWT 및 회원정보를 리턴한다.
+   * DB에 해당 정보가 없을 경우, 회원정보가 없다는 것을 알린다.
+   * @param user
+   * @returns JWT 및 회원정보를 리턴한다.
+   */
   async validateUser(
     user: LoginDTO
   ): Promise<{ accessToken: string; user: User } | undefined> {
@@ -69,6 +81,10 @@ export class AuthService {
     };
   }
 
+  /**
+   * 사용안함
+   * 회원 정보를 리턴한다.
+   */
   // async tokenValidateUser(loginDTO: LoginDTO): Promise<UserDTO | undefined> {
   //   const userFind = await this.userService.findByFeilds({
   //     where: { username: loginDTO.username },
@@ -77,6 +93,12 @@ export class AuthService {
   //   return userFind;
   // }
 
+  /**
+   * 사용안함
+   * 회원의 authorities가 있을 경우 회원의 정보랑 정합하여 리턴한다.
+   * @param user
+   * @returns 회원 정보를 리턴한다.
+   */
   // private flatAuthorities(user: any): User {
   //   if (user && user.authorities) {
   //     const authorities: string[] = [];
@@ -89,44 +111,61 @@ export class AuthService {
   //   return user;
   // }
 
-  private convertInAuthorities(user: any): User {
-    if (user && user.authorities) {
-      const authorities: any[] = [];
-      user.authorities.forEach((authority) => {
-        authorities.push({ name: authority.authorityName });
-      });
-      user.authorities = authorities;
-    }
+  /**
+   * 사용안함
+   * 회원의 authorities가 있을 경우 회원의 정보랑 정합하여 리턴한다.
+   * @param user
+   * @returns 회원 정보를 리턴한다.
+   */
+  // private convertInAuthorities(user: any): User {
+  //   if (user && user.authorities) {
+  //     const authorities: any[] = [];
+  //     user.authorities.forEach((authority) => {
+  //       authorities.push({ name: authority.authorityName });
+  //     });
+  //     user.authorities = authorities;
+  //   }
 
-    return user;
-  }
+  //   return user;
+  // }
 
-  async findByProviderIdOrdSave(socialUser: {
-    provider: string;
-    providerId: string;
-  }) {
-    const { provider, providerId } = socialUser;
+  /**
+   * 사용안함
+   * 소셜로 가입할 경우 소셜 정보와 회원의 정보를 저장한다.
+   * @param username
+   * @returns
+   */
+  // async findByProviderIdOrdSave(socialUser: {
+  //   provider: string;
+  //   providerId: string;
+  // }) {
+  //   const { provider, providerId } = socialUser;
 
-    const user = await this.userService.findByFeilds({
-      where: { username: providerId },
-    });
+  //   const user = await this.userService.findByFeilds({
+  //     where: { username: providerId },
+  //   });
 
-    console.warn("there is USER?", user);
+  //   console.warn("there is USER?", user);
 
-    if (user) {
-      return user;
-    }
+  //   if (user) {
+  //     return user;
+  //   }
 
-    const UserDTO: UserDTO = {
-      username: providerId,
-      password: providerId,
-      social_type: provider,
-      gender: "소셜이라 없을수도 있어!",
-    };
+  //   const UserDTO: UserDTO = {
+  //     username: providerId,
+  //     password: providerId,
+  //     social_type: provider,
+  //     gender: "소셜이라 없을수도 있어!",
+  //   };
 
-    return this.regiseterNewUser(UserDTO);
-  }
+  //   return this.regiseterNewUser(UserDTO);
+  // }
 
+  /**
+   * DB에 회원정보가 있을 경우 회원 정보를 리턴한다.
+   * @param username
+   * @returns 회원 정보를 리턴한다.
+   */
   async findUser(username: string): Promise<User> {
     const findUser: User = await this.userService.findByFeilds({
       where: { username },
@@ -135,6 +174,11 @@ export class AuthService {
     return findUser;
   }
 
+  /**
+   * JWT값으로 DB에 있는 회원 정보를 리턴한다.
+   * @param headers
+   * @returns 회원 정보를 리턴한다.
+   */
   async jwtFindUser(headers: Headers): Promise<User | undefined> {
     const jwtstring = headers["authorization"];
     const getjwt = jwtstring.split("Bearer")[1].trim();
@@ -144,18 +188,34 @@ export class AuthService {
     return findUser;
   }
 
-  async socialUserDoLoginOrSave(userData): Promise<string> {
-    const user = await this.findByProviderIdOrdSave({ ...userData });
-    const jwt = await this.validateUser(user);
+  /**
+   * 소셜로 회원 가입할 경우 회원 정보를 저장한 뒤 JWT를 리턴한다.
+   * @param userId
+   * @returns 소셜 회원의 JWT를 리턴한다.
+   */
+  // async socialUserDoLoginOrSave(userData): Promise<string> {
+  //   const user = await this.findByProviderIdOrdSave({ ...userData });
+  //   const jwt = await this.validateUser(user);
 
-    return jwt.accessToken;
-  }
+  //   return jwt.accessToken;
+  // }
 
+  /**
+   * 회원 정보를 삭제한다.
+   * @param userId
+   * @returns 삭제된 회원 정보를 리턴한다.
+   */
   async deleteUser(userId: User): Promise<Boolean> {
     const { username } = userId;
     return await this.userService.deleteUser(username);
   }
 
+  /**
+   * Request로 들어온 회원 정보를 변경한다.
+   * @param username
+   * @param gender
+   * @returns 변경된 회원를 리턴한다.
+   */
   async updateUser(
     username: string,
     gender: string
@@ -178,6 +238,11 @@ export class AuthService {
     };
   }
 
+  /**
+   * 회원의 권한이 USER일 경우 ADMIN으로 변경한다.
+   * @param userInfo
+   * @returns 변경된 회원 정보를 리턴한다.
+   */
   async setAdmin(userInfo: User): Promise<boolean> {
     if (userInfo.authorities === "ADMIN") {
       throw new HttpException("이미 어드민 입니다.", 500);

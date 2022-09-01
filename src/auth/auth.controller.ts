@@ -28,14 +28,24 @@ import { CustomAuthGuard } from "./security/auth.guard";
 export class AuthController {
   constructor(private authService: AuthService) {}
 
+  /**
+   * 회원가입 로직
+   * username, password, gender값을 이용하여 DB에 저장한다.
+   * @param userDTO
+   * @returns 회원정볼르 리턴한다.
+   */
   @Post("/register")
-  async registerAccount(
-    @Req() req: Request,
-    @Body() userDTO: UserDTO
-  ): Promise<UserDTO> {
+  async registerAccount(@Body() userDTO: UserDTO): Promise<UserDTO> {
     return await this.authService.regiseterNewUser(userDTO);
   }
 
+  /**
+   * 로그인 로직
+   * 로그인 정보로 회원을 구별한 뒤 JWT를 리턴한다.
+   * @param loginDTO
+   * @param res
+   * @returns jwt, message, statusCode를 리턴한다.
+   */
   @Post("/login")
   async login(
     @Body() loginDTO: LoginDTO,
@@ -149,6 +159,12 @@ export class AuthController {
   //   });
   // }
 
+  /**
+   * 회원 정보 조회 로직
+   * JWT를 이용하여 회원을 조회한다.
+   * @param headers
+   * @returns 회원 정보를 리턴한다.
+   */
   @Get("/getUserInfo")
   @UseGuards(CustomAuthGuard)
   async getUserInfo(@Headers() headers: Headers): Promise<User | undefined> {
@@ -157,6 +173,13 @@ export class AuthController {
     return findUser;
   }
 
+  /**
+   * 회원 삭제 로직
+   * 해당 회원의 JWT를 이용하여 회원 정보를 조회한 뒤 해당 회원을 삭제한다.
+   * @param headers
+   * @param res
+   * @returns message, statusCode를 리턴한다.
+   */
   @Post("delete")
   @UseGuards(CustomAuthGuard)
   async deleteUser(
@@ -176,6 +199,15 @@ export class AuthController {
     console.log("회원 정보 삭제시켜!");
   }
 
+  /**
+   * 회원 정보 업데이트 로직
+   * 해당 회원의 JWT를 이용하여 회원 정보를 조회한 뒤 회원 정보를 업데이트 한다.
+   *  - 성별만 변경이 가능하다.
+   * @param headers
+   * @param body
+   * @param res
+   * @returns 업데이트 된 회원 정보를 리턴한다.
+   */
   @Post("update")
   @UseGuards(CustomAuthGuard)
   async updateUser(
@@ -193,8 +225,14 @@ export class AuthController {
     }
   }
 
+  /**
+   * 회원 권한 ADMIN 변경
+   * 회원의 JWT를 이용하여 권한이 USER일 경우 ADMIN으로 변경한다.
+   * @param headers
+   * @returns message, statusCode를 리턴한다.
+   */
   @Post("setadmin")
-  // @UseGuards(AuthGuard("jwt"))
+  @UseGuards(CustomAuthGuard)
   @Roles("USER")
   async setAdmin(@Headers() headers: Headers): Promise<any> {
     const findUser = await this.authService.jwtFindUser(headers);
