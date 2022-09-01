@@ -16,7 +16,6 @@ import { BoardAnswerRepository } from "src/board/repository/board.answer.reposit
   imports: [
     TypeOrmExModule.forCustomRepository([
       UserRepository,
-      // UserAuthorityRepository,
       BoardRepository,
       BoardCommentRepository,
       BoardAnswerRepository,
