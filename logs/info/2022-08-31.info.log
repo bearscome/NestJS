@@ -1518,3 +1518,1249 @@
 {"level":"info","message":"Wed Aug 31 2022 14:58:53 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
 {"level":"info","message":"Wed Aug 31 2022 14:59:18 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
 {"level":"info","message":"Wed Aug 31 2022 14:59:19 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"ExceptionsHandler","level":"error","message":"jwt expired","stack":["TokenExpiredError: jwt expired\n    at /Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:152:21\n    at getSecret (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:90:14)\n    at Object.module.exports [as verify] (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:94:10)\n    at JwtService.verify (/Users/leehyosung/nest-auth/node_modules/@nestjs/jwt/dist/jwt.service.js:38:20)\n    at LoggerMiddleware.use (/Users/leehyosung/nest-auth/src/middleware/logger.middleware.ts:28:31)\n    at /Users/leehyosung/nest-auth/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/leehyosung/nest-auth/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:328:13)\n    at /Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:286:9\n    at param (/Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:365:14)"]}
+{"level":"info","message":"Wed Aug 31 2022 15:08:16 GMT+0900 (대한민국 표준시) GET / 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:25 GMT+0900 (대한민국 표준시) POST /auth/login 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {\"username\":\"asd\",\"password\":\"asd\"}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:26 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:26 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:40 GMT+0900 (대한민국 표준시) POST /board/create 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 [object Object] {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:41 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:08:41 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:22:31 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=263 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:22:31 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=263 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:22:31 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=263 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:22:32 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:22:32 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:24:00 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=263 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:24:00 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=263 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:24:00 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=263 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:24:11 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 15:24:11 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 16:05:50 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 16:05:50 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"ExceptionsHandler","level":"error","message":"Unexpected token = in JSON at position 34","stack":["SyntaxError: Unexpected token = in JSON at position 34\n    at JSON.parse (<anonymous>)\n    at Object.jwsDecode [as decode] (/Users/leehyosung/nest-auth/node_modules/jws/lib/verify-stream.js:71:20)\n    at module.exports (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/decode.js:5:21)\n    at Object.module.exports [as verify] (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:69:20)\n    at JwtService.verify (/Users/leehyosung/nest-auth/node_modules/@nestjs/jwt/dist/jwt.service.js:38:20)\n    at LoggerMiddleware.use (/Users/leehyosung/nest-auth/src/middleware/logger.middleware.ts:28:31)\n    at /Users/leehyosung/nest-auth/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/leehyosung/nest-auth/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:328:13)\n    at /Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:286:9"]}
+{"level":"info","message":"Wed Aug 31 2022 16:06:04 GMT+0900 (대한민국 표준시) POST /auth/login 201 ::1 PostmanRuntime/7.29.2  {\"username\":\"qwe1\",\"password\":\"qwe1\"}"}
+{"level":"info","message":"Wed Aug 31 2022 16:06:26 GMT+0900 (대한민국 표준시) POST /board/deleteAll 201 ::1 PostmanRuntime/7.29.2 [object Object] {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 16:32:59 GMT+0900 (대한민국 표준시) POST /auth/login 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {\"username\":\"qwe\",\"password\":\"qwe\"}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:13:32 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:13:32 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:13:42 GMT+0900 (대한민국 표준시) POST /board/create 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 [object Object] {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:13:44 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:13:44 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:14:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:14:43 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:14:59 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:15:13 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:15:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:18:37 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:18:37 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:19:26 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:19:57 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:20:21 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:20:21 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:21:04 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:21:47 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:22:06 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:24:32 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:27:14 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/all/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:28:04 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:28:08 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:etc, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"ExceptionsHandler","level":"error","message":"jwt expired","stack":["TokenExpiredError: jwt expired\n    at /Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:152:21\n    at getSecret (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:90:14)\n    at Object.module.exports [as verify] (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:94:10)\n    at JwtService.verify (/Users/leehyosung/nest-auth/node_modules/@nestjs/jwt/dist/jwt.service.js:38:20)\n    at LoggerMiddleware.use (/Users/leehyosung/nest-auth/src/middleware/logger.middleware.ts:28:31)\n    at /Users/leehyosung/nest-auth/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/leehyosung/nest-auth/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:328:13)\n    at /Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:286:9\n    at param (/Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:365:14)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:etc, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:etc, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:etc, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"ExceptionsHandler","level":"error","message":"jwt expired","stack":["TokenExpiredError: jwt expired\n    at /Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:152:21\n    at getSecret (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:90:14)\n    at Object.module.exports [as verify] (/Users/leehyosung/nest-auth/node_modules/jsonwebtoken/verify.js:94:10)\n    at JwtService.verify (/Users/leehyosung/nest-auth/node_modules/@nestjs/jwt/dist/jwt.service.js:38:20)\n    at LoggerMiddleware.use (/Users/leehyosung/nest-auth/src/middleware/logger.middleware.ts:28:31)\n    at /Users/leehyosung/nest-auth/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/leehyosung/nest-auth/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:328:13)\n    at /Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:286:9\n    at param (/Users/leehyosung/nest-auth/node_modules/express/lib/router/index.js:365:14)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:34:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:34:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:35:56 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:36:01 GMT+0900 (대한민국 표준시) GET /board/history/search?type=title&text=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:36:01 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:36:05 GMT+0900 (대한민국 표준시) GET /board/history/search?type=title&text=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:36:06 GMT+0900 (대한민국 표준시) GET /board/history/search?type=title&text=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:36:31 GMT+0900 (대한민국 표준시) GET /board/history/search?type=title&text=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:01 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:04 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:13 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:37 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:49 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 404 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:51 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 404 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:51 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 404 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:52 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 404 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:37:52 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 404 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:38:05 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:51:21 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:08 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:08 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:10 GMT+0900 (대한민국 표준시) POST /auth/login 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {\"username\":\"qwe\",\"password\":\"qwe\"}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:11 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:11 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:13 GMT+0900 (대한민국 표준시) POST /board/create 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 [object Object] {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:14 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:15 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:19 GMT+0900 (대한민국 표준시) POST /board/create 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 [object Object] {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:21 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:21 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:25 GMT+0900 (대한민국 표준시) POST /auth/login 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {\"username\":\"asd\",\"password\":\"asd\"}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:29 GMT+0900 (대한민국 표준시) POST /board/create 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 [object Object] {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:31 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:31 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:34 GMT+0900 (대한민국 표준시) POST /board/create 201 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 [object Object] {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:55:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 17:56:18 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=content&searchContent=asdasd&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:56:18 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:56:40 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=content&searchContent=qwe&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:57:39 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:57:39 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:57:46 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:57:46 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:58:36 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:58:39 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:58:59 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:59:03 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:59:35 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 17:59:38 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Wed Aug 31 2022 18:01:15 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 18:01:16 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 18:01:17 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 18:01:17 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Wed Aug 31 2022 18:01:17 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}

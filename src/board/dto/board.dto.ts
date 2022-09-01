@@ -36,13 +36,18 @@ export class GetHistoryBoardDTO {
 
 export class BoardResponseStatus {
   @IsNumber()
-  status: number; 
+  status: number;
 
   @IsString()
-  message: string
+  message: string;
 }
 
-export class BoardHistroy extends BoardResponseStatus{
-  total:number
-  list:Board
+export class BoardHistroy extends BoardResponseStatus {
+  total: number;
+  list: Board;
+}
+
+export class SearchHistoryDTO extends GetHistoryBoardDTO {
+  searchType: string;
+  searchContent: string;
 }

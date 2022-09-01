@@ -15,9 +15,10 @@ import {
   UploadedFile,
   BadRequestException,
   Inject,
+  Param,
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
-import { Request, Response } from "express";
+import { query, Request, Response } from "express";
 import { diskStorage } from "multer";
 import { extname } from "path";
 import { AuthService } from "src/auth/auth.service";
@@ -25,6 +26,7 @@ import { BoardCommentDTO } from "src/board/dto/board.comment.dto";
 import {
   BoardDTO,
   CreateBoardDTO,
+  SearchHistoryDTO,
   UpdateBoardDTO,
 } from "src/board/dto/board.dto";
 import { ResponseData } from "src/auth/dto/user.dto";
@@ -41,9 +43,8 @@ import { WINSTON_MODULE_PROVIDER } from "nest-winston";
 export class BoardController {
   constructor(
     private boardService: BoardService,
-    private authService: AuthService
-  ) // @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: WinstonLogger
-  {}
+    private authService: AuthService // @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: WinstonLogger
+  ) {}
 
   @Post("/create")
   @UseGuards(CustomAuthGuard)
@@ -168,6 +169,17 @@ export class BoardController {
     @Query("limit", new DefaultValuePipe(10), ParseIntPipe) limit: number
   ) {
     return await this.boardService.history({ offset, limit });
+  }
+
+  @Get("history/search")
+  async searchBoard(@Query() qeuryDTO: SearchHistoryDTO) {
+    const queryData: SearchHistoryDTO = {
+      searchType: qeuryDTO.searchType,
+      searchContent: qeuryDTO.searchContent,
+      offset: qeuryDTO.offset,
+      limit: qeuryDTO.limit,
+    };
+    return await this.boardService.searchBoard(queryData);
   }
 
   @Get("histroy/detail")

@@ -260,6 +260,39 @@ export class BoardService {
     return result;
   }
 
+  async searchBoard({
+    searchType,
+    searchContent,
+    limit,
+    offset,
+  }): Promise<any> {
+    let result: {
+      status: number;
+      message: string;
+      result: Array<Board | []>;
+      total: number;
+    } = {
+      status: 0,
+      message: "",
+      result: [],
+      total: 0,
+    };
+
+    const [boardList, total] = await Promise.all([
+      this.boardRepository.manager.query(
+        `SELECT * FROM board WHERE ${searchType} like '%${searchContent}%' ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
+      ),
+      this.boardRepository.count(),
+    ]);
+
+    result.status = 4000;
+    result.message = "조회가 완료되었습니다.";
+    result.total = total;
+    result.result = boardList;
+
+    return result;
+  }
+
   async addComment(insertData: {
     username: string;
     board_id: number;

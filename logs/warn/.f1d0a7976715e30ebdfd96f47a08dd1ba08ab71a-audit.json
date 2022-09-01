@@ -9,6 +9,11 @@
             "date": 1661911628770,
             "name": "/Users/leehyosung/nest-auth/logs/warn/2022-08-31.warn.log",
             "hash": "c8e4a261f1e597df6b2b8aa685871a22c4d43759d1c7e5421b01835568034c1f"
+        },
+        {
+            "date": 1661991224254,
+            "name": "/Users/leehyosung/nest-auth/logs/warn/2022-09-01.warn.log",
+            "hash": "b1fc5b80c778a3b3df132ce487d2d1dd91921d36dcfaef4ea750a9e177ef3a81"
         }
     ],
     "hashType": "sha256"

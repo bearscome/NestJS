@@ -1,0 +1,169 @@
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:46 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=qwe&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:46 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=266 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:46 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=266 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:46 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=266 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:47 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:47 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:52 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=264 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:52 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=264 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:52 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=264 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:55 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:55 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:57 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=265 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:57 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=265 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:57 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=265 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:57 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:57 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:58 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=266 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:58 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=266 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:58 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=266 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:59 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:13:59 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:14:00 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=267 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:14:00 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=267 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:14:00 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=267 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:14:01 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:14:01 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:14:04 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=q&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"ExceptionsHandler","level":"error","message":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%q%' ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT 0, 10' at line 1","stack":["QueryFailedError: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%q%' ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT 0, 10' at line 1\n    at Query.onResult (/Users/leehyosung/nest-auth/src/driver/mysql/MysqlQueryRunner.ts:222:33)\n    at Query.execute (/Users/leehyosung/nest-auth/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/Users/leehyosung/nest-auth/node_modules/mysql2/lib/connection.js:456:32)\n    at PacketParser.onPacket (/Users/leehyosung/nest-auth/node_modules/mysql2/lib/connection.js:85:12)\n    at PacketParser.executeStart (/Users/leehyosung/nest-auth/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/Users/leehyosung/nest-auth/node_modules/mysql2/lib/connection.js:92:25)\n    at Socket.emit (node:events:390:28)\n    at addChunk (node:internal/streams/readable:315:12)\n    at readableAddChunk (node:internal/streams/readable:289:9)\n    at Socket.Readable.push (node:internal/streams/readable:228:10)"]}
+{"level":"info","message":"Thu Sep 01 2022 09:16:04 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=q&limit=10&offset=0 500 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Thu Sep 01 2022 09:17:01 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=q&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TypeOrmExModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"BoardModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/getUserInfo, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/setadmin, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"BoardController {/board}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/delete, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/update, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/search, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/histroy/detail, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/history/comment, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/answer/create, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/board/deleteAll, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:07 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=q&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:20 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:20 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:27 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=title&searchContent=a&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:31 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:31 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:41 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=268 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:41 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=268 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:41 GMT+0900 (대한민국 표준시) GET /board/histroy/detail?id=268 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:42 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:42 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:45 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=username&searchContent=asd&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:47 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:47 GMT+0900 (대한민국 표준시) GET /board/history?limit=10&offset=0 304 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
+{"level":"info","message":"Thu Sep 01 2022 09:18:54 GMT+0900 (대한민국 표준시) GET /board/history/search?searchType=username&searchContent=qwe&limit=10&offset=0 200 ::1 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36  {}"}
