@@ -46,6 +46,14 @@ export class BoardController {
     private authService: AuthService // @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: WinstonLogger
   ) {}
 
+  /**
+   * 게시판 글을 DB에 저장한다.
+   * @param header
+   * @param boardDTO
+   * @param res
+   * @param file
+   * @returns 성공 및 실패를 리턴한다.
+   */
   @Post("/create")
   @UseGuards(CustomAuthGuard)
   @UseInterceptors(
@@ -92,6 +100,12 @@ export class BoardController {
     }
   }
 
+  /**
+   * 게시판 글을 삭제한다.
+   * @param board_id
+   * @param res
+   * @returns 성공 및 실패를 리턴한다.
+   */
   @Post("/delete")
   @UseGuards(CustomAuthGuard)
   async deleteBoard(
@@ -126,6 +140,11 @@ export class BoardController {
     }
   }
 
+  /**
+   * 게시판 글을 변경한다.
+   * @param updateBoardDTO
+   * @returns 성공 및 실패를 리턴한다.
+   */
   @Post("/update")
   @UseGuards(CustomAuthGuard)
   async updateBoard(@Body() updateBoardDTO: UpdateBoardDTO) {
@@ -159,6 +178,12 @@ export class BoardController {
     }
   }
 
+  /**
+   * 게시판 글을 페이징으로 조회한다.
+   * @param offset
+   * @param limit
+   * @returns 페이징된 게시글을 리턴한다.
+   */
   @Get("history")
   // query로 넘어올 시 스트링으로 들어오나, Validation안에 있는 transform을 true로 변경한 뒤,
   // DTO에서 @Type(() => Number)로 수정하면 넘버형으로 변견된다
@@ -171,6 +196,11 @@ export class BoardController {
     return await this.boardService.history({ offset, limit });
   }
 
+  /**
+   * 검색된 게시글을 조횐한다.
+   * @param qeuryDTO
+   * @returns 조건에 맞는게시글을 리턴한다.
+   */
   @Get("history/search")
   async searchBoard(@Query() qeuryDTO: SearchHistoryDTO) {
     const queryData: SearchHistoryDTO = {
@@ -182,11 +212,22 @@ export class BoardController {
     return await this.boardService.searchBoard(queryData);
   }
 
+  /**
+   * 게시글을 상세 조회 한다.
+   * @param id
+   * @returns 상세조회된 게시글을 리턴한다.
+   */
   @Get("histroy/detail")
   async findOne(@Query("id", ParseIntPipe) id: number) {
     return await this.boardService.findBoard(id);
   }
 
+  /**
+   * 게시된 게시글에 댓글을 저장한다.
+   * @param header
+   * @param boardCommentDTO
+   * @returns 저장된 댓글을 리턴한다.
+   */
   @Post("history/comment")
   @UseGuards(CustomAuthGuard)
   async addComment(
@@ -206,6 +247,14 @@ export class BoardController {
     return await this.boardService.addComment(inserData);
   }
 
+  /**
+   * 게시글에 답변을 정장한다.
+   * @param header
+   * @param boardAnswerDTO
+   * @param file
+   * @param res
+   * @returns 성공 및 실패를 리턴한다.
+   */
   @Post("answer/create")
   @UseGuards(CustomAuthGuard)
   @UseInterceptors(
@@ -249,6 +298,11 @@ export class BoardController {
       });
   }
 
+  /**
+   * 권한이 어드민일 경우 모든 게시글을 삭제한다.
+   * @param res
+   * @return 성공 및 실패를 리턴한다.
+   */
   @Post("deleteAll")
   @UseGuards(CustomAuthGuard, RolesGuard)
   @Roles("ADMIN")
