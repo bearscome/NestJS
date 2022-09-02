@@ -7,6 +7,7 @@ import {
 } from "class-validator";
 
 export function NotIn(property: string, validationOptions?: ValidationOptions) {
+  // 커스텀 데코레이션 예제
   return (object: Object, propertyName: string) => {
     registerDecorator({
       name: "NotIn",
