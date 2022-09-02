@@ -10,9 +10,7 @@ import { JwtStrategy } from "./security/passport.jwt.strategy";
 
 @Module({
   imports: [
-    TypeOrmExModule.forCustomRepository([
-      UserRepository,
-    ]),
+    TypeOrmExModule.forCustomRepository([UserRepository]),
     JwtModule.register({
       secret: "process.env.JWT_ACCESS_TOKEN_SECRET",
       signOptions: {
