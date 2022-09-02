@@ -6,6 +6,9 @@ import { RoleType } from "../decorator/role-type";
 
 @Injectable()
 export class RolesGuard implements CanActivate {
+  // nestJS의 UseGuards를 사용하기 위해 커스텀 RolesGuard를 생성함
+  // CustomAuthGuard에서 유저의 정보가 넘어온 뒤,
+  // 해당 유저가 ["ADMIN", "USER"]인지 판단한 후 Boolean값을 리턴함
   constructor(
     private reflector: Reflector,
     // private jwtService: JwtService,

@@ -248,7 +248,7 @@ export class BoardController {
   }
 
   /**
-   * 게시글에 답변을 정장한다.
+   * 게시글에 답변을 저장한다.
    * @param header
    * @param boardAnswerDTO
    * @param file
