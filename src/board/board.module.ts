@@ -13,8 +13,8 @@ import { BoardRepository } from "./repository/board.repository";
     TypeOrmExModule.forCustomRepository([
       BoardRepository,
       BoardCommentRepository,
-      BoardAnswerRepository
-    ])
+      BoardAnswerRepository,
+    ]),
   ],
   controllers: [BoardController],
   providers: [BoardService],

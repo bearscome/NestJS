@@ -27,8 +27,8 @@ export class BoardService {
 
   /**
    * 게시판 상세 조회
-   * @param borad_id 게시판 고유 아이디
-   * @returns 게시판 상세
+   * @param borad_id
+   * @returns 조건에 맞는 게시판 row를 가져옵니다.
    */
   async findBoard(borad_id: number): Promise<Board> {
     // 게시글 고유 아이디 get,
@@ -38,21 +38,33 @@ export class BoardService {
     });
     const comment = await findBoard.comments;
 
-    console.warn("findBoard", findBoard);
     // Javascript 혹은 Node.js에서는 Lazy Loading을 사용하기 위해서는 Promise가 사용됩니다. 이것은 비표준 방법이며 TypeOrm에서의 실험적인 기능입니다.
     return findBoard;
   }
 
+  /**
+   * 조건에 맞는 ref값을 가져옵니다.
+   * @param ref
+   * @returns 조건에 맞는 값을 리턴합니다.
+   */
   async refCountBy(ref: number): Promise<number> {
     return await this.boardRepository.countBy({ ref });
   }
 
+  /**
+   * 게시글을 DB에 저장합니다.
+   * @param createBoardDTO
+   * @returns 저장된 게시글을 리턴합니다.
+   */
   async createBoard(createBoardDTO: CreateBoardDTO): Promise<CreateBoardDTO> {
-    console.log(createBoardDTO);
     return await this.boardRepository.save(createBoardDTO);
-    // 게시글 생성 서비스 로직
   }
 
+  /**
+   * 조건에 맞는 게시글을 삭제합니다.
+   * @param board_id
+   * @returns 성공 및 실패에 대한 객체를 리턴합니다.
+   */
   async deleteBoard(board_id: number): Promise<BoardResponseStatus> {
     // return await this.boardRepository.delete()
     // 게시글 삭제 서비스 로직
@@ -87,6 +99,10 @@ export class BoardService {
     }
   }
 
+  /**
+   * 권한이 ADMIN일 경우 모든 게시글을 삭제합니다.
+   * @returns 성공 및 실패를 Boolean 값으로 리턴합니다.
+   */
   async deleteBoardAll(): Promise<boolean> {
     const boardList = await this.boardRepository.find({
       select: {
@@ -152,6 +168,11 @@ export class BoardService {
     return await deleteList();
   }
 
+  /**
+   * 조건에 맞는 게시글을 업데이트 합니다.
+   * @param updateBoardDTO
+   * @returns 성공 및 실패를 객체로 리턴합니다.
+   */
   async updateBoard(
     updateBoardDTO: UpdateBoardDTO
   ): Promise<BoardResponseStatus> {
@@ -185,16 +206,21 @@ export class BoardService {
           message: "삭제 완료되었습니다.",
         };
       });
-
-      return result;
     } catch (err) {
       console.error("deleteBoard_ERR", err);
       result.status = 4999;
       result.message = "알수없는 오류가 발생하였습니다.";
-      return result;
     }
+
+    return result;
   }
 
+  /**
+   * 게시글을 페이징 처리하여 리턴합니다.
+   * @param offset
+   * @param limit
+   * @returns 갯수에 맞게 게시글을 리턴합니다.
+   */
   async history({
     offset,
     limit,
@@ -254,18 +280,37 @@ export class BoardService {
       console.error("histroy_ERR", err);
       result.status = 4999;
       result.message = "알수없는 오류가 발생하였습니다.";
-      return result;
     }
 
     return result;
   }
 
+  /**
+   * 검색 조건에 따라 게시글을 조회한다.
+   * @param {
+   *  searchType // title:제목, username:회원 아이디, content: 본문 내용
+   *  searchContent
+   *  limit
+   *  offset
+   * }
+   * @returns 게시글을 리턴한다.
+   */
   async searchBoard({
     searchType,
     searchContent,
     limit,
     offset,
-  }): Promise<any> {
+  }: {
+    searchType: string;
+    searchContent: string;
+    limit: number;
+    offset: number;
+  }): Promise<{
+    status: number;
+    message: string;
+    result: Array<Board | []>;
+    total: number;
+  }> {
     let result: {
       status: number;
       message: string;
@@ -278,23 +323,37 @@ export class BoardService {
       total: 0,
     };
 
-    const [boardList, total] = await Promise.all([
-      this.boardRepository.manager.query(
-        `SELECT * FROM board WHERE ${searchType} like '%${searchContent}%' ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
-      ),
-      this.boardRepository.manager.query(
-        `SELECT COUNT(*) as total FROM board WHERE ${searchType} like '%${searchContent}%'`
-      ),
-    ]);
-
-    result.status = 4000;
-    result.message = "조회가 완료되었습니다.";
-    result.total = total[0].total;
-    result.result = boardList;
+    try {
+      const [boardList, total] = await Promise.all([
+        this.boardRepository.manager.query(
+          `SELECT * FROM board WHERE ${searchType} like '%${searchContent}%' ORDER BY IF(ref = 0, borad_id , ref) DESC, orderby LIMIT ${offset}, ${limit}`
+        ),
+        this.boardRepository.manager.query(
+          `SELECT COUNT(*) as total FROM board WHERE ${searchType} like '%${searchContent}%'`
+        ),
+      ]);
+      result.status = 4000;
+      result.message = "조회가 완료되었습니다.";
+      result.total = total[0].total;
+      result.result = boardList;
+    } catch (err) {
+      console.error("deleteBoard_ERR", err);
+      result.status = 4999;
+      result.message = "알수없는 오류가 발생하였습니다.";
+    }
 
     return result;
   }
 
+  /**
+   * 게시글에 댓글을 저장한다.
+   * @param {
+   *  username: string;
+   *  board_id: number;
+   *  content: string;
+   * }
+   * @returns 저장된 댓글을 리턴한다.
+   */
   async addComment(insertData: {
     username: string;
     board_id: number;
@@ -308,6 +367,11 @@ export class BoardService {
     return await this.commentRepository.save(insertData);
   }
 
+  /**
+   * 게시글에 답변을 저장한다.
+   * @param addAnswerDto BoardAnswerAddDTD
+   * @returns 저장된 답변을 리턴한다.
+   */
   async addAnswer(addAnswerDto: BoardAnswerAddDTD): Promise<Board> {
     // https://whitemackerel.tistory.com/55
     const { board_id, username, title, content, indent } = addAnswerDto;
@@ -322,7 +386,6 @@ export class BoardService {
       ref: board_id,
       orderby: setOrderBy,
     };
-    console.log("add", insertData);
     return await this.boardRepository.save(insertData);
   }
 }
