@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/leehyosung/nest-auth/logs/warn/.f1d0a7976715e30ebdfd96f47a08dd1ba08ab71a-audit.json",
+    "files": [
+        {
+            "date": 1661911628770,
+            "name": "/Users/leehyosung/nest-auth/logs/warn/2022-08-31.warn.log",
+            "hash": "c8e4a261f1e597df6b2b8aa685871a22c4d43759d1c7e5421b01835568034c1f"
+        },
+        {
+            "date": 1661991224254,
+            "name": "/Users/leehyosung/nest-auth/logs/warn/2022-09-01.warn.log",
+            "hash": "b1fc5b80c778a3b3df132ce487d2d1dd91921d36dcfaef4ea750a9e177ef3a81"
+        },
+        {
+            "date": 1662077966271,
+            "name": "/Users/leehyosung/nest-auth/logs/warn/2022-09-02.warn.log",
+            "hash": "d537b596ff54a3b608f8d559283631c4f7ec03a8195b96a5d9019e4e7491655b"
+        }
+    ],
+    "hashType": "sha256"
+}
