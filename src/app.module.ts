@@ -11,6 +11,7 @@ import { KakaoStategy } from "./auth/strategy/kakaoStrategy";
 import { BoardModule } from "./board/board.module";
 import { LoggerMiddleware } from "./middleware/logger.middleware";
 import { JwtService } from "@nestjs/jwt";
+import { EventsModule } from "./events/events.module";
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { JwtService } from "@nestjs/jwt";
     TypeOrmModule.forRootAsync({ useFactory: ormConfig }),
     AuthModule,
     BoardModule,
+    EventsModule,
   ],
   controllers: [AppController],
   providers: [

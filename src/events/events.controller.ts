@@ -8,9 +8,7 @@ export class EventsController {
    * MGW 인증
    */
   @Post("codeNumber")
-  async codeNumber(
-    @Body() body: { data: { password: string } }
-  ): Promise<{ status: number; message: string }> {
-    return await this.eventsService.checkPassword(body.data.password);
+  async codeNumber(@Body() body: { password: string }): Promise<any> {
+    return await this.eventsService.checkPassword(body.password);
   }
 }
