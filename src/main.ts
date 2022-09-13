@@ -5,6 +5,7 @@ import express from "express";
 import { join } from "path";
 import { ValidationPipe } from "@nestjs/common";
 import { winstonLogger } from "./util/winston.util";
+import { IoAdapter } from "@nestjs/platform-socket.io";
 // import { WINSTON_MODULE_NEST_PROVIDER } from "nest-winston";
 
 async function bootstrap() {
@@ -26,6 +27,8 @@ async function bootstrap() {
   // app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
   // logger 전역 사용
 
-  await app.listen(3000);
+  app.useWebSocketAdapter(new IoAdapter(app));
+
+  await app.listen(3001);
 }
 bootstrap();
